@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="092d9014b0b641abb43da24c44e6a39d" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="losnacimientosModel.Afps" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Aguinaldos" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Cargos" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.CategoriasIndemnizaciones" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.CategoriasPlanillas" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.CorreosEmpleados" Width="1.5" PointX="7.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Departamentos" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Empleados" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Estados" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Generos" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Indemnizaciones" Width="1.5" PointX="10.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Planillas_Jefes" Width="1.5" PointX="7.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.PlanillasProduccion" Width="1.5" PointX="7.5" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.PlanillasVentas" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Roles" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.TelefonosEmpleados" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.TiposTelefonos" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="losnacimientosModel.Usuarios" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="losnacimientosModel.FK_Empleados_Afps" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Aguinaldos_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Cargos_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Empleados_Cargos" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Indemnizaciones_CategoriasIndemnizaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_PlanillasVentas_CategoriasPlanillas" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_CorreosEmpleados_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Empleados_Estados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Empleados_Generos" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Indemnizaciones_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Planillas_Jefes_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_PlanillasProduccion_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_PlanillasVentas_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_TelefonosEmpleados_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_Usuarios_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="losnacimientosModel.FK_TelefonosEmpleados_TiposTelefonos" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="losnacimientosModel.Reportes" Width="1.5" PointX="7.5" PointY="21.5" />
+        <AssociationConnector Association="losnacimientosModel.FK_Reportes_Empleados" />
+        <EntityTypeShape EntityType="losnacimientosModel.CategoriasAguinaldos" Width="1.5" PointX="3.375" PointY="3.875" />
+        <AssociationConnector Association="losnacimientosModel.FK_Aguinaldos_CategoriasAguinaldos" />
+        <EntityTypeShape EntityType="losnacimientosModel.Pagos" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="losnacimientosModel.PagoVacaciones" Width="1.5" PointX="7.5" PointY="25" />
+        <AssociationConnector Association="losnacimientosModel.FK__PagoVacac__Emple__395884C4" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
