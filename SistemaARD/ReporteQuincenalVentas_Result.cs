@@ -10,26 +10,23 @@
 namespace SistemaARD
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class PlanillasProduccion
+    public partial class ReporteQuincenalVentas_Result
     {
         public int Id { get; set; }
-        public int Empleado_Id { get; set; }
-        public decimal Pago_hora { get; set; }
-        public int Horas_laboradas { get; set; }
+        public string Trabajador { get; set; }
+        public int Dias_Remunerados { get; set; }
+        public Nullable<int> Dias_Remunerados1 { get; set; }
+        public Nullable<int> Dias_Asueto_Trabajados { get; set; }
+        public Nullable<decimal> Salario_Quincenal { get; set; }
         public decimal Anticipos { get; set; }
         public System.DateTime Fecha_Inicio { get; set; }
         public Nullable<System.DateTime> Fecha_Final { get; set; }
-        public Nullable<double> Horas_extras { get; set; }
+        public Nullable<decimal> Hora_Ordinaria_100 { get; set; }
+        public Nullable<decimal> Seguro_Social { get; set; }
+        public Nullable<decimal> AFP_CONFIA { get; set; }
+        public Nullable<decimal> Asueto_400 { get; set; }
         public Nullable<int> Dias_vacaciones { get; set; }
-        public Nullable<int> Dias_incapacitado { get; set; }
-        public Nullable<double> Horas_dias_incompletos { get; set; }
-        public Nullable<double> Horas_dias_asueto { get; set; }
-        public Nullable<int> Dias_perdidos { get; set; }
-        public Nullable<int> Dias_laborados { get; set; }
-        public Nullable<int> Categoria_Id { get; set; }
-    
-        public virtual Empleados Empleados { get; set; }
+        public Nullable<decimal> Vacaciones_30 { get; set; }
     }
 }

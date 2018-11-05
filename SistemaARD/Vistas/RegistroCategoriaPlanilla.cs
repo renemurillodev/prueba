@@ -37,7 +37,7 @@ namespace SistemaARD.Vistas
                         MessageBox.Show("Categoría registrada con éxito");
                         txtNombre.Text = txtDescripcion.Text = "";
                     }
-                    catch(Exception ex)
+                    catch(Exception)
                     {
                         MessageBox.Show("Algo salió mal");
                     }

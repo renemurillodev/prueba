@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="092d9014b0b641abb43da24c44e6a39d" Name="Diagram1" ZoomLevel="65">
+      <Diagram DiagramId="092d9014b0b641abb43da24c44e6a39d" Name="Diagram1" ZoomLevel="111">
         <EntityTypeShape EntityType="losnacimientosModel.Afps" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="losnacimientosModel.Aguinaldos" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="losnacimientosModel.Cargos" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
@@ -40,7 +40,7 @@
         <AssociationConnector Association="losnacimientosModel.FK_TelefonosEmpleados_Empleados" ManuallyRouted="false" />
         <AssociationConnector Association="losnacimientosModel.FK_Usuarios_Roles" ManuallyRouted="false" />
         <AssociationConnector Association="losnacimientosModel.FK_TelefonosEmpleados_TiposTelefonos" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="losnacimientosModel.Reportes" Width="1.5" PointX="7.5" PointY="21.5" />
+        <EntityTypeShape EntityType="losnacimientosModel.Reportes" Width="1.5" PointX="3.75" PointY="21.25" />
         <AssociationConnector Association="losnacimientosModel.FK_Reportes_Empleados" />
         <EntityTypeShape EntityType="losnacimientosModel.CategoriasAguinaldos" Width="1.5" PointX="3.375" PointY="3.875" />
         <AssociationConnector Association="losnacimientosModel.FK_Aguinaldos_CategoriasAguinaldos" />

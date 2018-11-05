@@ -10,19 +10,17 @@
 namespace SistemaARD
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Reportes
+    public partial class ListarAguinaldosMantenimiento_Result
     {
         public int Id { get; set; }
         public int Empleado_Id { get; set; }
-        public decimal Sueldo { get; set; }
-        public decimal Pago_Afp { get; set; }
-        public decimal Pago_Isss { get; set; }
-        public Nullable<decimal> Pago_Renta { get; set; }
-        public System.DateTime Fecha_Inicio { get; set; }
-        public Nullable<System.DateTime> Fecha_Final { get; set; }
-    
-        public virtual Empleados Empleados { get; set; }
+        public string Empleado { get; set; }
+        public decimal Salario_diario { get; set; }
+        public string Fecha_de_ingreso { get; set; }
+        public int Años_de_trabajo { get; set; }
+        public Nullable<int> Dias_trabajados { get; set; }
+        public Nullable<int> Dias_a_pagar { get; set; }
+        public System.DateTime Fecha_de_pago { get; set; }
     }
 }

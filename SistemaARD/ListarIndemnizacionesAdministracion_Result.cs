@@ -10,19 +10,15 @@
 namespace SistemaARD
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Reportes
+    public partial class ListarIndemnizacionesAdministracion_Result
     {
         public int Id { get; set; }
         public int Empleado_Id { get; set; }
-        public decimal Sueldo { get; set; }
-        public decimal Pago_Afp { get; set; }
-        public decimal Pago_Isss { get; set; }
-        public Nullable<decimal> Pago_Renta { get; set; }
-        public System.DateTime Fecha_Inicio { get; set; }
-        public Nullable<System.DateTime> Fecha_Final { get; set; }
-    
-        public virtual Empleados Empleados { get; set; }
+        public string EMPLEADO { get; set; }
+        public string FECHA_DE_INGRESO { get; set; }
+        public decimal SALARIO_MENSUAL { get; set; }
+        public int AÑOS_PENDIENTE_DE_LIQUIDAR { get; set; }
+        public int DÍAS_PENDIENTE_DE_LIQUIDAR { get; set; }
     }
 }

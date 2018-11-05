@@ -10,19 +10,16 @@
 namespace SistemaARD
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Reportes
+    public partial class ListarPagosVacacionesProduccion_Result
     {
         public int Id { get; set; }
-        public int Empleado_Id { get; set; }
-        public decimal Sueldo { get; set; }
-        public decimal Pago_Afp { get; set; }
-        public decimal Pago_Isss { get; set; }
-        public Nullable<decimal> Pago_Renta { get; set; }
-        public System.DateTime Fecha_Inicio { get; set; }
-        public Nullable<System.DateTime> Fecha_Final { get; set; }
-    
-        public virtual Empleados Empleados { get; set; }
+        public Nullable<int> Empleado_Id { get; set; }
+        public string Empleado { get; set; }
+        public string Cargo { get; set; }
+        public string Fecha_de_ingreso { get; set; }
+        public Nullable<System.DateTime> Fecha_de_pago { get; set; }
+        public string Total_a_pagar { get; set; }
+        public Nullable<decimal> Monto { get; set; }
     }
 }

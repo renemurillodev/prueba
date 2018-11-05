@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 
@@ -37,7 +36,7 @@ namespace SistemaARD.Vistas
                 System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                 cmd.CommandText = "VerificarPlanillaJefes";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("Fecha", dtpFecha.Value));
+                cmd.Parameters.Add(new SqlParameter("Fecha", dtpFechaInicio.Value));
                 cmd.Parameters.Add(new SqlParameter("IdEmpleado", int.Parse(idEmpleado)));
                 res = (int)cmd.ExecuteScalar();
                 db.Database.Connection.Close();
@@ -54,7 +53,8 @@ namespace SistemaARD.Vistas
                 System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                 cmd.CommandText = "VerificarPlanillaProduccion";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("Fecha", dtpFecha.Value));
+                cmd.Parameters.Add(new SqlParameter("Fecha_Inicio", dtpFechaInicio.Value));
+                cmd.Parameters.Add(new SqlParameter("Fecha_Final", dtpFechaFinal.Value));
                 cmd.Parameters.Add(new SqlParameter("IdEmpleado", int.Parse(idEmpleado)));
                 res = (int)cmd.ExecuteScalar();
                 db.Database.Connection.Close();
@@ -71,7 +71,8 @@ namespace SistemaARD.Vistas
                 System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                 cmd.CommandText = "VerificarPlanillaVentas";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("Fecha", dtpFecha.Value));
+                cmd.Parameters.Add(new SqlParameter("Fecha_Inicio", dtpFechaInicio.Value));
+                cmd.Parameters.Add(new SqlParameter("Fecha_Final", dtpFechaFinal.Value));
                 cmd.Parameters.Add(new SqlParameter("IdEmpleado", int.Parse(idEmpleado)));
                 res = (int)cmd.ExecuteScalar();
                 db.Database.Connection.Close();
@@ -232,8 +233,14 @@ namespace SistemaARD.Vistas
                     planillaVentas.Empleado_Id = Convert.ToInt32(idEmpleado);
                     planillaVentas.Pago_diario = Convert.ToDecimal(txtPagoDiario.Text);
                     planillaVentas.Dias_laborados = Convert.ToInt32(txtDiasLaborados.Text);
+                    planillaVentas.Dias_asueto = Convert.ToInt32(txtDiasAsuetos.Text);
                     planillaVentas.Anticipos = Convert.ToDecimal(txtAnticipos.Text);
-                    planillaVentas.Fecha = dtpFecha.Value;
+                    planillaVentas.Fecha_Final = dtpFechaFinal.Value;
+                    planillaVentas.Fecha_Inicio = dtpFechaInicio.Value;
+                    planillaVentas.Dias_vacaciones = Convert.ToInt32(txtVacaciones.Text);
+                    planillaVentas.Dias_incapacitado = Convert.ToInt32(txtIncapacitado.Text);
+                    planillaVentas.Dias_perdidos = Convert.ToInt32(txtDiasPerdidos.Text);
+                    planillaVentas.Viaticos = Convert.ToDecimal(txtViaticos.Text);
                     planillaVentas.Categoria_Id = 1;
 
                     //Registrar en tabla Reportes 
@@ -264,7 +271,8 @@ namespace SistemaARD.Vistas
 
 
                     reporte.Pago_Renta = 0;
-                    reporte.Fecha = dtpFecha.Value;
+                    reporte.Fecha_Inicio = dtpFechaInicio.Value;
+                    reporte.Fecha_Final = dtpFechaFinal.Value;
 
                     using (DBEntities db = new DBEntities())
                     {
@@ -278,7 +286,7 @@ namespace SistemaARD.Vistas
                             chbAfp.Checked = true;
                             chbIsss.Checked = true;
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                             MessageBox.Show("Algo salió mal");
@@ -303,8 +311,14 @@ namespace SistemaARD.Vistas
                     planillaVentas.Empleado_Id = Convert.ToInt32(idEmpleado);
                     planillaVentas.Pago_diario = Convert.ToDecimal(txtPagoDiario.Text);
                     planillaVentas.Dias_laborados = Convert.ToInt32(txtDiasLaborados.Text);
+                    planillaVentas.Dias_asueto = Convert.ToInt32(txtDiasAsuetos.Text);
                     planillaVentas.Anticipos = Convert.ToDecimal(txtAnticipos.Text);
-                    planillaVentas.Fecha = dtpFecha.Value;
+                    planillaVentas.Fecha_Final = dtpFechaFinal.Value;
+                    planillaVentas.Fecha_Inicio = dtpFechaInicio.Value;
+                    planillaVentas.Dias_vacaciones = Convert.ToInt32(txtVacaciones.Text);
+                    planillaVentas.Dias_incapacitado = Convert.ToInt32(txtIncapacitado.Text);
+                    planillaVentas.Dias_perdidos = Convert.ToInt32(txtDiasPerdidos.Text);
+                    planillaVentas.Viaticos = Convert.ToDecimal(txtViaticos.Text);
                     planillaVentas.Categoria_Id = 3;
 
                     //Registrar en tabla Reportes 
@@ -335,7 +349,8 @@ namespace SistemaARD.Vistas
 
 
                     reporte.Pago_Renta = 0;
-                    reporte.Fecha = dtpFecha.Value;
+                    reporte.Fecha_Inicio = dtpFechaInicio.Value;
+                    reporte.Fecha_Final = dtpFechaFinal.Value;
 
                     using (DBEntities db = new DBEntities())
                     {
@@ -350,7 +365,7 @@ namespace SistemaARD.Vistas
                             chbIsss.Checked = true;
                             txtAnticipos.Text = "0";
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                             throw;
@@ -374,9 +389,15 @@ namespace SistemaARD.Vistas
                     planillaVentas.Empleado_Id = Convert.ToInt32(idEmpleado);
                     planillaVentas.Pago_diario = Convert.ToDecimal(txtPagoDiario.Text);
                     planillaVentas.Dias_laborados = Convert.ToInt32(txtDiasLaborados.Text);
+                    planillaVentas.Dias_asueto = Convert.ToInt32(txtDiasAsuetos.Text);
                     planillaVentas.Horas_extra = Convert.ToInt32(txtHorasExtra.Text);
                     planillaVentas.Anticipos = Convert.ToDecimal(txtAnticipos.Text);
-                    planillaVentas.Fecha = dtpFecha.Value;
+                    planillaVentas.Fecha_Final = dtpFechaFinal.Value;
+                    planillaVentas.Fecha_Inicio = dtpFechaInicio.Value;
+                    planillaVentas.Dias_vacaciones = Convert.ToInt32(txtVacaciones.Text);
+                    planillaVentas.Dias_incapacitado = Convert.ToInt32(txtIncapacitado.Text);
+                    planillaVentas.Dias_perdidos = Convert.ToInt32(txtDiasPerdidos.Text);
+                    planillaVentas.Viaticos = Convert.ToDecimal(txtViaticos.Text);
                     planillaVentas.Categoria_Id = 2;
 
                     //Registrar en tabla Reportes 
@@ -407,7 +428,8 @@ namespace SistemaARD.Vistas
 
 
                     reporte.Pago_Renta = 0;
-                    reporte.Fecha = dtpFecha.Value;
+                    reporte.Fecha_Inicio = dtpFechaInicio.Value;
+                    reporte.Fecha_Final = dtpFechaFinal.Value;
 
                     using (DBEntities db = new DBEntities())
                     {
@@ -422,7 +444,7 @@ namespace SistemaARD.Vistas
                             chbIsss.Checked = true;
                             txtAnticipos.Text = "0";
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                             MessageBox.Show("Algo salió mal");
@@ -447,7 +469,16 @@ namespace SistemaARD.Vistas
                     planillaProduccion.Pago_hora = Convert.ToDecimal(txtPagoHora.Text);
                     planillaProduccion.Horas_laboradas = Convert.ToInt32(txtHorasLaboradas.Text);
                     planillaProduccion.Anticipos = Convert.ToDecimal(txtAnticipos.Text);
-                    planillaProduccion.Fecha = dtpFecha.Value;
+                    planillaProduccion.Fecha_Final = dtpFechaFinal.Value;
+                    planillaProduccion.Fecha_Inicio = dtpFechaInicio.Value;
+                    planillaProduccion.Dias_vacaciones = Convert.ToInt32(txtVacaciones.Text);
+                    planillaProduccion.Dias_incapacitado = Convert.ToInt32(txtIncapacitado.Text);
+                    planillaProduccion.Dias_perdidos = Convert.ToInt32(txtDiasPerdidos.Text);
+                    planillaProduccion.Horas_extras = Convert.ToDouble(txtHorasExtra.Text);
+                    planillaProduccion.Horas_dias_incompletos = Convert.ToDouble(txtHorasDiasIncompletos.Text);
+                    planillaProduccion.Horas_dias_asueto = Convert.ToDouble(txtDiasAsuetos.Text);
+                    planillaProduccion.Dias_perdidos = Convert.ToInt32(txtDiasPerdidos.Text);
+                    planillaProduccion.Categoria_Id = 4;
 
 
                     //Registrar en tabla Reportes 
@@ -478,7 +509,8 @@ namespace SistemaARD.Vistas
 
 
                     reporte.Pago_Renta = 0;
-                    reporte.Fecha = dtpFecha.Value;
+                    reporte.Fecha_Inicio = dtpFechaInicio.Value;
+                    reporte.Fecha_Final = dtpFechaFinal.Value;
 
                     using (DBEntities db = new DBEntities())
                     {
@@ -493,7 +525,7 @@ namespace SistemaARD.Vistas
                             chbIsss.Checked = true;
                             txtAnticipos.Text = "0";
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                             MessageBox.Show("Algo salió mal");
@@ -518,7 +550,7 @@ namespace SistemaARD.Vistas
                     planillaAdmon.Empleado_Id = Convert.ToInt32(idEmpleado);
 
                     planillaAdmon.Anticipos = Convert.ToDecimal(txtAnticipos.Text);
-                    planillaAdmon.Fecha = dtpFecha.Value;
+                    planillaAdmon.Fecha = dtpFechaInicio.Value;
                     decimal salarioMensual = 0;
                     int idEmp = int.Parse(idEmpleado);
                     using (DBEntities db = new DBEntities())
@@ -557,7 +589,8 @@ namespace SistemaARD.Vistas
 
 
                     reporte.Pago_Renta = 0;
-                    reporte.Fecha = dtpFecha.Value;
+                    reporte.Fecha_Inicio = dtpFechaInicio.Value;
+                    reporte.Fecha_Final = dtpFechaFinal.Value;
 
                     using (DBEntities db = new DBEntities())
                     {

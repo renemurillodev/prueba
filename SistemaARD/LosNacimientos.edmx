@@ -155,7 +155,16 @@
           <Property Name="Pago_hora" Type="decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Horas_laboradas" Type="int" Nullable="false" />
           <Property Name="Anticipos" Type="decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+          <Property Name="Fecha_Final" Type="date" />
+          <Property Name="Horas_extras" Type="float" />
+          <Property Name="Dias_vacaciones" Type="int" />
+          <Property Name="Dias_incapacitado" Type="int" />
+          <Property Name="Horas_dias_incompletos" Type="float" />
+          <Property Name="Horas_dias_asueto" Type="float" />
+          <Property Name="Dias_perdidos" Type="int" />
+          <Property Name="Dias_laborados" Type="int" />
+          <Property Name="Categoria_Id" Type="int" />
         </EntityType>
         <EntityType Name="PlanillasVentas">
           <Key>
@@ -166,9 +175,15 @@
           <Property Name="Pago_diario" Type="decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Dias_laborados" Type="int" Nullable="false" />
           <Property Name="Anticipos" Type="decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
           <Property Name="Categoria_Id" Type="int" Nullable="false" />
           <Property Name="Horas_extra" Type="int" />
+          <Property Name="Fecha_Final" Type="date" />
+          <Property Name="Dias_asueto" Type="int" />
+          <Property Name="Dias_vacaciones" Type="int" />
+          <Property Name="Dias_incapacitado" Type="int" />
+          <Property Name="Viaticos" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="Dias_perdidos" Type="int" />
         </EntityType>
         <EntityType Name="Reportes">
           <Key>
@@ -180,7 +195,8 @@
           <Property Name="Pago_Afp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Pago_Isss" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Pago_Renta" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+          <Property Name="Fecha_Final" Type="date" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -453,6 +469,99 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CambiarPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DeterminarDepartamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idEmpleado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="IniciarSesion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Username" Type="varchar" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="InsertarAguinaldoAdministracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertarAguinaldoMantenimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertarAguinaldoProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertarAguinaldoTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertarAguinaldoVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertarIndemnizacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="InsertarUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Username" Type="varchar" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+          <Parameter Name="Rol_Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ListarAguinaldosAdministracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarAguinaldosMantenimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarAguinaldosProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarAguinaldosTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarAguinaldosVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarIndemnizaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarIndemnizacionesAdministracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarIndemnizacionesAdministracionConFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ListarIndemnizacionesMantenimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarIndemnizacionesMantenimientoConFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ListarIndemnizacionesProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarIndemnizacionesProduccionConFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ListarIndemnizacionesTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarIndemnizacionesTransporteConFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ListarIndemnizacionesVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarIndemnizacionesVentasConFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ListarPagosVacacionesAdministracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarPagosVacacionesMantenimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarPagosVacacionesProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarPagosVacacionesTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarPagosVacacionesVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarTodasIndemnizacionesFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ListarTodosPagosVacaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="reporte_planillaproduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_planillaproduccion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="reporte_planillaventa1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_planillaventas" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ReporteQuincenalVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Desde" Type="date" Mode="In" />
+          <Parameter Name="Hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="VerificarPagoVacacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="idEmpleado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="VerificarPlanillaJefes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="VerificarPlanillaProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="VerificarPlanillaVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="losnacimientosModelStoreContainer">
           <EntitySet Name="Afps" EntityType="Self.Afps" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Aguinaldos" EntityType="Self.Aguinaldos" Schema="dbo" store:Type="Tables" />
@@ -710,8 +819,17 @@
           <Property Name="Pago_hora" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Horas_laboradas" Type="Int32" Nullable="false" />
           <Property Name="Anticipos" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Empleados" Relationship="Self.FK_PlanillasProduccion_Empleados" FromRole="PlanillasProduccion" ToRole="Empleados" />
+          <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fecha_Final" Type="DateTime" Precision="0" />
+          <Property Name="Horas_extras" Type="Double" />
+          <Property Name="Dias_vacaciones" Type="Int32" />
+          <Property Name="Dias_incapacitado" Type="Int32" />
+          <Property Name="Horas_dias_incompletos" Type="Double" />
+          <Property Name="Horas_dias_asueto" Type="Double" />
+          <Property Name="Dias_perdidos" Type="Int32" />
+          <Property Name="Dias_laborados" Type="Int32" />
+          <Property Name="Categoria_Id" Type="Int32" />
         </EntityType>
         <EntityType Name="PlanillasVentas">
           <Key>
@@ -722,11 +840,17 @@
           <Property Name="Pago_diario" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Dias_laborados" Type="Int32" Nullable="false" />
           <Property Name="Anticipos" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Categoria_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CategoriasPlanillas" Relationship="Self.FK_PlanillasVentas_CategoriasPlanillas" FromRole="PlanillasVentas" ToRole="CategoriasPlanillas" />
           <NavigationProperty Name="Empleados" Relationship="Self.FK_PlanillasVentas_Empleados" FromRole="PlanillasVentas" ToRole="Empleados" />
           <Property Name="Horas_extra" Type="Int32" />
+          <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fecha_Final" Type="DateTime" Precision="0" />
+          <Property Name="Dias_asueto" Type="Int32" />
+          <Property Name="Dias_vacaciones" Type="Int32" />
+          <Property Name="Dias_incapacitado" Type="Int32" />
+          <Property Name="Viaticos" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="Dias_perdidos" Type="Int32" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -1068,6 +1192,99 @@
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="PagoVacaciones" EntitySet="PagoVacaciones" />
           </AssociationSet>
+          <FunctionImport Name="CambiarPassword" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeterminarDepartamento" ReturnType="Collection(Int32)">
+          <Parameter Name="idEmpleado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="IniciarSesion" ReturnType="Collection(Int32)">
+            <Parameter Name="Username" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarAguinaldoAdministracion" />
+          <FunctionImport Name="InsertarAguinaldoMantenimiento" />
+          <FunctionImport Name="InsertarAguinaldoProduccion" />
+          <FunctionImport Name="InsertarAguinaldoTransporte" />
+          <FunctionImport Name="InsertarAguinaldoVentas" />
+          <FunctionImport Name="InsertarIndemnizacion" ReturnType="Collection(Int32)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarUsuarios" ReturnType="Collection(Int32)">
+            <Parameter Name="Username" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="Rol_Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ListarAguinaldosAdministracion" ReturnType="Collection(losnacimientosModel.ListarAguinaldosAdministracion_Result)" />
+          <FunctionImport Name="ListarAguinaldosMantenimiento" ReturnType="Collection(losnacimientosModel.ListarAguinaldosMantenimiento_Result)" />
+          <FunctionImport Name="ListarAguinaldosProduccion" ReturnType="Collection(losnacimientosModel.ListarAguinaldosProduccion_Result)" />
+          <FunctionImport Name="ListarAguinaldosTransporte" ReturnType="Collection(losnacimientosModel.ListarAguinaldosTransporte_Result)" />
+          <FunctionImport Name="ListarAguinaldosVentas" ReturnType="Collection(losnacimientosModel.ListarAguinaldosVentas_Result)" />
+          <FunctionImport Name="ListarIndemnizaciones" ReturnType="Collection(losnacimientosModel.ListarIndemnizaciones_Result)" />
+          <FunctionImport Name="ListarIndemnizacionesAdministracion" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesAdministracion_Result)" />
+          <FunctionImport Name="ListarIndemnizacionesAdministracionConFiltro" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesAdministracionConFiltro_Result)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ListarIndemnizacionesMantenimiento" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesMantenimiento_Result)" />
+          <FunctionImport Name="ListarIndemnizacionesMantenimientoConFiltro" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesMantenimientoConFiltro_Result)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ListarIndemnizacionesProduccion" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesProduccion_Result)" />
+          <FunctionImport Name="ListarIndemnizacionesProduccionConFiltro" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesProduccionConFiltro_Result)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ListarIndemnizacionesTransporte" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesTransporte_Result)" />
+          <FunctionImport Name="ListarIndemnizacionesTransporteConFiltro" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesTransporteConFiltro_Result)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ListarIndemnizacionesVentas" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesVentas_Result)" />
+          <FunctionImport Name="ListarIndemnizacionesVentasConFiltro" ReturnType="Collection(losnacimientosModel.ListarIndemnizacionesVentasConFiltro_Result)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ListarPagosVacacionesAdministracion" ReturnType="Collection(losnacimientosModel.ListarPagosVacacionesAdministracion_Result)" />
+          <FunctionImport Name="ListarPagosVacacionesMantenimiento" ReturnType="Collection(losnacimientosModel.ListarPagosVacacionesMantenimiento_Result)" />
+          <FunctionImport Name="ListarPagosVacacionesProduccion" ReturnType="Collection(losnacimientosModel.ListarPagosVacacionesProduccion_Result)" />
+          <FunctionImport Name="ListarPagosVacacionesTransporte" ReturnType="Collection(losnacimientosModel.ListarPagosVacacionesTransporte_Result)" />
+          <FunctionImport Name="ListarPagosVacacionesVentas" ReturnType="Collection(losnacimientosModel.ListarPagosVacacionesVentas_Result)" />
+          <FunctionImport Name="ListarTodasIndemnizacionesFiltro" ReturnType="Collection(losnacimientosModel.ListarTodasIndemnizacionesFiltro_Result)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ListarTodosPagosVacaciones" ReturnType="Collection(losnacimientosModel.ListarTodosPagosVacaciones_Result)" />
+          <FunctionImport Name="ListarUsuarios" ReturnType="Collection(losnacimientosModel.ListarUsuarios_Result)" />
+          <FunctionImport Name="reporte_planillaproduccion" ReturnType="Collection(losnacimientosModel.reporte_planillaproduccion_Result)">
+          <Parameter Name="id_planillaproduccion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="reporte_planillaventa1" ReturnType="Collection(losnacimientosModel.reporte_planillaventa1_Result)">
+          <Parameter Name="id_planillaventas" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ReporteQuincenalVentas" ReturnType="Collection(losnacimientosModel.ReporteQuincenalVentas_Result)">
+            <Parameter Name="Desde" Mode="In" Type="DateTime" />
+            <Parameter Name="Hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="VerificarPagoVacacion" ReturnType="Collection(Int32)">
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="idEmpleado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="VerificarPlanillaJefes" ReturnType="Collection(Int32)">
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="VerificarPlanillaProduccion">
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="VerificarPlanillaVentas">
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Reportes">
           <Key>
@@ -1079,8 +1296,9 @@
           <Property Name="Pago_Afp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="Pago_Isss" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="Pago_Renta" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Empleados" Relationship="losnacimientosModel.FK_Reportes_Empleados" FromRole="Reportes" ToRole="Empleados" />
+          <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fecha_Final" Type="DateTime" Precision="0" />
         </EntityType>
         <Association Name="FK_Reportes_Empleados">
           <End Type="losnacimientosModel.Empleados" Role="Empleados" Multiplicity="1" />
@@ -1145,6 +1363,307 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="ListarAguinaldosAdministracion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="Decimal" Name="Salario_diario" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Años_de_trabajo" Nullable="false" />
+          <Property Type="Int32" Name="Dias_trabajados" Nullable="true" />
+          <Property Type="Int32" Name="Dias_a_pagar" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="ListarAguinaldosMantenimiento_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="Decimal" Name="Salario_diario" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Años_de_trabajo" Nullable="false" />
+          <Property Type="Int32" Name="Dias_trabajados" Nullable="true" />
+          <Property Type="Int32" Name="Dias_a_pagar" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="ListarAguinaldosProduccion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="Decimal" Name="Salario_diario" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Años_de_trabajo" Nullable="false" />
+          <Property Type="Int32" Name="Dias_trabajados" Nullable="true" />
+          <Property Type="Int32" Name="Dias_a_pagar" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="ListarAguinaldosTransporte_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="Decimal" Name="Salario_diario" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Años_de_trabajo" Nullable="false" />
+          <Property Type="Int32" Name="Dias_trabajados" Nullable="true" />
+          <Property Type="Int32" Name="Dias_a_pagar" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="ListarAguinaldosVentas_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="Decimal" Name="Salario_diario" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Años_de_trabajo" Nullable="false" />
+          <Property Type="Int32" Name="Dias_trabajados" Nullable="true" />
+          <Property Type="Int32" Name="Dias_a_pagar" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizaciones_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesAdministracion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesAdministracionConFiltro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesMantenimiento_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesMantenimientoConFiltro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesProduccion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesProduccionConFiltro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesTransporte_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesTransporteConFiltro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesVentas_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarIndemnizacionesVentasConFiltro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarPagosVacacionesAdministracion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="true" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Cargo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="true" />
+          <Property Type="String" Name="Total_a_pagar" Nullable="false" MaxLength="42" />
+          <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ListarPagosVacacionesMantenimiento_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="true" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Cargo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="true" />
+          <Property Type="String" Name="Total_a_pagar" Nullable="false" MaxLength="42" />
+          <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ListarPagosVacacionesProduccion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="true" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Cargo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="true" />
+          <Property Type="String" Name="Total_a_pagar" Nullable="false" MaxLength="42" />
+          <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ListarPagosVacacionesTransporte_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="true" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Cargo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="true" />
+          <Property Type="String" Name="Total_a_pagar" Nullable="false" MaxLength="42" />
+          <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ListarPagosVacacionesVentas_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="true" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Cargo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="true" />
+          <Property Type="String" Name="Total_a_pagar" Nullable="false" MaxLength="42" />
+          <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ListarTodasIndemnizacionesFiltro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="false" />
+          <Property Type="String" Name="EMPLEADO" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="FECHA_DE_INGRESO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="SALARIO_MENSUAL" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AÑOS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+          <Property Type="Int32" Name="DÍAS_PENDIENTE_DE_LIQUIDAR" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ListarTodosPagosVacaciones_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Empleado_Id" Nullable="true" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Cargo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fecha_de_ingreso" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_de_pago" Nullable="true" />
+          <Property Type="String" Name="Total_a_pagar" Nullable="false" MaxLength="42" />
+          <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ListarUsuarios_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Rol_Id" Nullable="false" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Rol" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="reporte_planillaproduccion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Trabajador" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre1" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="Pago_hora" Nullable="false" Precision="6" Scale="2" />
+          <Property Type="Int32" Name="Dias_Remunerados" Nullable="true" />
+          <Property Type="Decimal" Name="Salario_Hora" Nullable="false" Precision="6" Scale="2" />
+          <Property Type="Decimal" Name="Salario_Dia" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="Int32" Name="Dias_Remunerados1" Nullable="true" />
+          <Property Type="Int32" Name="Dias_perdidos" Nullable="true" />
+          <Property Type="Decimal" Name="Salario_Quincenal" Nullable="true" Precision="11" Scale="2" />
+          <Property Type="Double" Name="Horas_Laboradas" Nullable="true" />
+          <Property Type="Double" Name="Horas_extras" Nullable="true" />
+          <Property Type="Double" Name="Horas_Extras_200" Nullable="true" />
+          <Property Type="Decimal" Name="Anticipos" Nullable="false" Precision="6" Scale="2" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Final" Nullable="true" />
+          <Property Type="Double" Name="Hora_Ordinaria_100" Nullable="true" />
+          <Property Type="Decimal" Name="Seguro_Social" Nullable="true" Precision="20" Scale="4" />
+          <Property Type="Decimal" Name="AFP_CONFIA" Nullable="true" Precision="22" Scale="6" />
+          <Property Type="Double" Name="Horas_dias_asueto" Nullable="true" />
+          <Property Type="Double" Name="Asueto_400" Nullable="true" />
+          <Property Type="Int32" Name="Dias_vacaciones" Nullable="true" />
+          <Property Type="Decimal" Name="Vacaciones_30" Nullable="true" Precision="28" Scale="6" />
+          <Property Type="Int32" Name="Dias_incapacitado" Nullable="true" />
+          <Property Type="Double" Name="Horas_dias_incompletos" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="reporte_planillaventa1_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Trabajador" Nullable="false" MaxLength="121" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre1" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="Salario_Diario" Nullable="false" Precision="6" Scale="2" />
+          <Property Type="Decimal" Name="Salario_Quincenal" Nullable="true" Precision="9" Scale="2" />
+          <Property Type="Decimal" Name="Salario_Hora" Nullable="true" Precision="10" Scale="6" />
+          <Property Type="Int32" Name="Dias_Remunerados" Nullable="true" />
+          <Property Type="Int32" Name="Dias_perdidos" Nullable="true" />
+          <Property Type="Int32" Name="Dias_Asueto_Trabajados" Nullable="true" />
+          <Property Type="Int32" Name="Horas_Laboradas" Nullable="true" />
+          <Property Type="Int32" Name="Horas_extra" Nullable="true" />
+          <Property Type="Int32" Name="Horas_Extras_200" Nullable="true" />
+          <Property Type="Decimal" Name="Anticipos" Nullable="false" Precision="6" Scale="2" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Final" Nullable="true" />
+          <Property Type="Decimal" Name="Hora_Ordinaria_100" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Seguro_Social" Nullable="true" Precision="20" Scale="4" />
+          <Property Type="Decimal" Name="AFP_CONFIA" Nullable="true" Precision="22" Scale="6" />
+          <Property Type="Int32" Name="Dia_Hora_Asueto" Nullable="true" />
+          <Property Type="Decimal" Name="Asueto_400" Nullable="true" Precision="21" Scale="6" />
+          <Property Type="Int32" Name="Dias_vacaciones" Nullable="true" />
+          <Property Type="Decimal" Name="Vacaciones_30" Nullable="true" Precision="26" Scale="6" />
+          <Property Type="Int32" Name="Dias_incapacitado" Nullable="true" />
+          <Property Type="Decimal" Name="Viaticos" Nullable="true" Precision="6" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ReporteQuincenalVentas_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Trabajador" Nullable="false" MaxLength="121" />
+          <Property Type="Int32" Name="Dias_Remunerados" Nullable="false" />
+          <Property Type="Int32" Name="Dias_Remunerados1" Nullable="true" />
+          <Property Type="Int32" Name="Dias_Asueto_Trabajados" Nullable="true" />
+          <Property Type="Decimal" Name="Salario_Quincenal" Nullable="true" Precision="9" Scale="2" />
+          <Property Type="Decimal" Name="Anticipos" Nullable="false" Precision="6" Scale="2" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Final" Nullable="true" />
+          <Property Type="Decimal" Name="Hora_Ordinaria_100" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Seguro_Social" Nullable="true" Precision="20" Scale="4" />
+          <Property Type="Decimal" Name="AFP_CONFIA" Nullable="true" Precision="22" Scale="6" />
+          <Property Type="Decimal" Name="Asueto_400" Nullable="true" Precision="21" Scale="6" />
+          <Property Type="Int32" Name="Dias_vacaciones" Nullable="true" />
+          <Property Type="Decimal" Name="Vacaciones_30" Nullable="true" Precision="26" Scale="6" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1281,25 +1800,40 @@
           <EntitySetMapping Name="PlanillasProduccion">
             <EntityTypeMapping TypeName="losnacimientosModel.PlanillasProduccion">
               <MappingFragment StoreEntitySet="PlanillasProduccion">
+                <ScalarProperty Name="Categoria_Id" ColumnName="Categoria_Id" />
+                <ScalarProperty Name="Dias_laborados" ColumnName="Dias_laborados" />
+                <ScalarProperty Name="Dias_perdidos" ColumnName="Dias_perdidos" />
+                <ScalarProperty Name="Horas_dias_asueto" ColumnName="Horas_dias_asueto" />
+                <ScalarProperty Name="Horas_dias_incompletos" ColumnName="Horas_dias_incompletos" />
+                <ScalarProperty Name="Dias_incapacitado" ColumnName="Dias_incapacitado" />
+                <ScalarProperty Name="Dias_vacaciones" ColumnName="Dias_vacaciones" />
+                <ScalarProperty Name="Horas_extras" ColumnName="Horas_extras" />
+                <ScalarProperty Name="Fecha_Final" ColumnName="Fecha_Final" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
                 <ScalarProperty Name="Pago_hora" ColumnName="Pago_hora" />
                 <ScalarProperty Name="Horas_laboradas" ColumnName="Horas_laboradas" />
                 <ScalarProperty Name="Anticipos" ColumnName="Anticipos" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PlanillasVentas">
             <EntityTypeMapping TypeName="losnacimientosModel.PlanillasVentas">
               <MappingFragment StoreEntitySet="PlanillasVentas">
+                <ScalarProperty Name="Dias_perdidos" ColumnName="Dias_perdidos" />
+                <ScalarProperty Name="Viaticos" ColumnName="Viaticos" />
+                <ScalarProperty Name="Dias_incapacitado" ColumnName="Dias_incapacitado" />
+                <ScalarProperty Name="Dias_vacaciones" ColumnName="Dias_vacaciones" />
+                <ScalarProperty Name="Dias_asueto" ColumnName="Dias_asueto" />
+                <ScalarProperty Name="Fecha_Final" ColumnName="Fecha_Final" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
                 <ScalarProperty Name="Horas_extra" ColumnName="Horas_extra" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
                 <ScalarProperty Name="Pago_diario" ColumnName="Pago_diario" />
                 <ScalarProperty Name="Dias_laborados" ColumnName="Dias_laborados" />
                 <ScalarProperty Name="Anticipos" ColumnName="Anticipos" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="Categoria_Id" ColumnName="Categoria_Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1354,7 +1888,8 @@
           <EntitySetMapping Name="Reportes">
             <EntityTypeMapping TypeName="losnacimientosModel.Reportes">
               <MappingFragment StoreEntitySet="Reportes">
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Fecha_Final" ColumnName="Fecha_Final" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
                 <ScalarProperty Name="Pago_Renta" ColumnName="Pago_Renta" />
                 <ScalarProperty Name="Pago_Isss" ColumnName="Pago_Isss" />
                 <ScalarProperty Name="Pago_Afp" ColumnName="Pago_Afp" />
@@ -1392,6 +1927,429 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CambiarPassword" FunctionName="losnacimientosModel.Store.CambiarPassword" />
+          <FunctionImportMapping FunctionImportName="DeterminarDepartamento" FunctionName="losnacimientosModel.Store.DeterminarDepartamento" />
+          <FunctionImportMapping FunctionImportName="IniciarSesion" FunctionName="losnacimientosModel.Store.IniciarSesion" />
+          <FunctionImportMapping FunctionImportName="InsertarAguinaldoAdministracion" FunctionName="losnacimientosModel.Store.InsertarAguinaldoAdministracion" />
+          <FunctionImportMapping FunctionImportName="InsertarAguinaldoMantenimiento" FunctionName="losnacimientosModel.Store.InsertarAguinaldoMantenimiento" />
+          <FunctionImportMapping FunctionImportName="InsertarAguinaldoProduccion" FunctionName="losnacimientosModel.Store.InsertarAguinaldoProduccion" />
+          <FunctionImportMapping FunctionImportName="InsertarAguinaldoTransporte" FunctionName="losnacimientosModel.Store.InsertarAguinaldoTransporte" />
+          <FunctionImportMapping FunctionImportName="InsertarAguinaldoVentas" FunctionName="losnacimientosModel.Store.InsertarAguinaldoVentas" />
+          <FunctionImportMapping FunctionImportName="InsertarIndemnizacion" FunctionName="losnacimientosModel.Store.InsertarIndemnizacion" />
+          <FunctionImportMapping FunctionImportName="InsertarUsuarios" FunctionName="losnacimientosModel.Store.InsertarUsuarios" />
+          <FunctionImportMapping FunctionImportName="ListarAguinaldosAdministracion" FunctionName="losnacimientosModel.Store.ListarAguinaldosAdministracion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarAguinaldosAdministracion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Salario_diario" ColumnName="Salario diario" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Años_de_trabajo" ColumnName="Años de trabajo" />
+                <ScalarProperty Name="Dias_trabajados" ColumnName="Dias trabajados" />
+                <ScalarProperty Name="Dias_a_pagar" ColumnName="Dias a pagar" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarAguinaldosMantenimiento" FunctionName="losnacimientosModel.Store.ListarAguinaldosMantenimiento">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarAguinaldosMantenimiento_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Salario_diario" ColumnName="Salario diario" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Años_de_trabajo" ColumnName="Años de trabajo" />
+                <ScalarProperty Name="Dias_trabajados" ColumnName="Dias trabajados" />
+                <ScalarProperty Name="Dias_a_pagar" ColumnName="Dias a pagar" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarAguinaldosProduccion" FunctionName="losnacimientosModel.Store.ListarAguinaldosProduccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarAguinaldosProduccion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Salario_diario" ColumnName="Salario diario" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Años_de_trabajo" ColumnName="Años de trabajo" />
+                <ScalarProperty Name="Dias_trabajados" ColumnName="Dias trabajados" />
+                <ScalarProperty Name="Dias_a_pagar" ColumnName="Dias a pagar" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarAguinaldosTransporte" FunctionName="losnacimientosModel.Store.ListarAguinaldosTransporte">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarAguinaldosTransporte_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Salario_diario" ColumnName="Salario diario" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Años_de_trabajo" ColumnName="Años de trabajo" />
+                <ScalarProperty Name="Dias_trabajados" ColumnName="Dias trabajados" />
+                <ScalarProperty Name="Dias_a_pagar" ColumnName="Dias a pagar" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarAguinaldosVentas" FunctionName="losnacimientosModel.Store.ListarAguinaldosVentas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarAguinaldosVentas_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Salario_diario" ColumnName="Salario diario" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Años_de_trabajo" ColumnName="Años de trabajo" />
+                <ScalarProperty Name="Dias_trabajados" ColumnName="Dias trabajados" />
+                <ScalarProperty Name="Dias_a_pagar" ColumnName="Dias a pagar" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizaciones" FunctionName="losnacimientosModel.Store.ListarIndemnizaciones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizaciones_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesAdministracion" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesAdministracion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesAdministracion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesAdministracionConFiltro" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesAdministracionConFiltro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesAdministracionConFiltro_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesMantenimiento" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesMantenimiento">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesMantenimiento_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesMantenimientoConFiltro" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesMantenimientoConFiltro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesMantenimientoConFiltro_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesProduccion" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesProduccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesProduccion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesProduccionConFiltro" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesProduccionConFiltro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesProduccionConFiltro_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesTransporte" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesTransporte">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesTransporte_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesTransporteConFiltro" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesTransporteConFiltro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesTransporteConFiltro_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesVentas" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesVentas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesVentas_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarIndemnizacionesVentasConFiltro" FunctionName="losnacimientosModel.Store.ListarIndemnizacionesVentasConFiltro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarIndemnizacionesVentasConFiltro_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarPagosVacacionesAdministracion" FunctionName="losnacimientosModel.Store.ListarPagosVacacionesAdministracion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarPagosVacacionesAdministracion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+                <ScalarProperty Name="Total_a_pagar" ColumnName="Total a pagar" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarPagosVacacionesMantenimiento" FunctionName="losnacimientosModel.Store.ListarPagosVacacionesMantenimiento">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarPagosVacacionesMantenimiento_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+                <ScalarProperty Name="Total_a_pagar" ColumnName="Total a pagar" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarPagosVacacionesProduccion" FunctionName="losnacimientosModel.Store.ListarPagosVacacionesProduccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarPagosVacacionesProduccion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+                <ScalarProperty Name="Total_a_pagar" ColumnName="Total a pagar" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarPagosVacacionesTransporte" FunctionName="losnacimientosModel.Store.ListarPagosVacacionesTransporte">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarPagosVacacionesTransporte_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+                <ScalarProperty Name="Total_a_pagar" ColumnName="Total a pagar" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarPagosVacacionesVentas" FunctionName="losnacimientosModel.Store.ListarPagosVacacionesVentas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarPagosVacacionesVentas_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+                <ScalarProperty Name="Total_a_pagar" ColumnName="Total a pagar" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarTodasIndemnizacionesFiltro" FunctionName="losnacimientosModel.Store.ListarTodasIndemnizacionesFiltro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarTodasIndemnizacionesFiltro_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="FECHA_DE_INGRESO" ColumnName="FECHA DE INGRESO" />
+                <ScalarProperty Name="SALARIO_MENSUAL" ColumnName="SALARIO MENSUAL" />
+                <ScalarProperty Name="AÑOS_PENDIENTE_DE_LIQUIDAR" ColumnName="AÑOS PENDIENTE DE LIQUIDAR" />
+                <ScalarProperty Name="DÍAS_PENDIENTE_DE_LIQUIDAR" ColumnName="DÍAS PENDIENTE DE LIQUIDAR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarTodosPagosVacaciones" FunctionName="losnacimientosModel.Store.ListarTodosPagosVacaciones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarTodosPagosVacaciones_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Fecha_de_pago" ColumnName="Fecha de pago" />
+                <ScalarProperty Name="Total_a_pagar" ColumnName="Total a pagar" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarUsuarios" FunctionName="losnacimientosModel.Store.ListarUsuarios">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ListarUsuarios_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Rol_Id" ColumnName="Rol_Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Rol" ColumnName="Rol" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="reporte_planillaproduccion" FunctionName="losnacimientosModel.Store.reporte_planillaproduccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.reporte_planillaproduccion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Trabajador" ColumnName="Trabajador" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+                <ScalarProperty Name="Pago_hora" ColumnName="Pago_hora" />
+                <ScalarProperty Name="Dias_Remunerados" ColumnName="Dias_Remunerados" />
+                <ScalarProperty Name="Salario_Hora" ColumnName="Salario_Hora" />
+                <ScalarProperty Name="Salario_Dia" ColumnName="Salario_Dia" />
+                <ScalarProperty Name="Dias_Remunerados1" ColumnName="Dias_Remunerados1" />
+                <ScalarProperty Name="Dias_perdidos" ColumnName="Dias_perdidos" />
+                <ScalarProperty Name="Salario_Quincenal" ColumnName="Salario_Quincenal" />
+                <ScalarProperty Name="Horas_Laboradas" ColumnName="Horas_Laboradas" />
+                <ScalarProperty Name="Horas_extras" ColumnName="Horas_extras" />
+                <ScalarProperty Name="Horas_Extras_200" ColumnName="Horas_Extras_200" />
+                <ScalarProperty Name="Anticipos" ColumnName="Anticipos" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Final" ColumnName="Fecha_Final" />
+                <ScalarProperty Name="Hora_Ordinaria_100" ColumnName="Hora_Ordinaria_100" />
+                <ScalarProperty Name="Seguro_Social" ColumnName="Seguro_Social" />
+                <ScalarProperty Name="AFP_CONFIA" ColumnName="AFP_CONFIA" />
+                <ScalarProperty Name="Horas_dias_asueto" ColumnName="Horas_dias_asueto" />
+                <ScalarProperty Name="Asueto_400" ColumnName="Asueto_400" />
+                <ScalarProperty Name="Dias_vacaciones" ColumnName="Dias_vacaciones" />
+                <ScalarProperty Name="Vacaciones_30" ColumnName="Vacaciones_30" />
+                <ScalarProperty Name="Dias_incapacitado" ColumnName="Dias_incapacitado" />
+                <ScalarProperty Name="Horas_dias_incompletos" ColumnName="Horas_dias_incompletos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="reporte_planillaventa1" FunctionName="losnacimientosModel.Store.reporte_planillaventa1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.reporte_planillaventa1_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Trabajador" ColumnName="Trabajador" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+                <ScalarProperty Name="Salario_Diario" ColumnName="Salario_Diario" />
+                <ScalarProperty Name="Salario_Quincenal" ColumnName="Salario_Quincenal" />
+                <ScalarProperty Name="Salario_Hora" ColumnName="Salario_Hora" />
+                <ScalarProperty Name="Dias_Remunerados" ColumnName="Dias_Remunerados" />
+                <ScalarProperty Name="Dias_perdidos" ColumnName="Dias_perdidos" />
+                <ScalarProperty Name="Dias_Asueto_Trabajados" ColumnName="Dias_Asueto_Trabajados" />
+                <ScalarProperty Name="Horas_Laboradas" ColumnName="Horas_Laboradas" />
+                <ScalarProperty Name="Horas_extra" ColumnName="Horas_extra" />
+                <ScalarProperty Name="Horas_Extras_200" ColumnName="Horas_Extras_200" />
+                <ScalarProperty Name="Anticipos" ColumnName="Anticipos" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Final" ColumnName="Fecha_Final" />
+                <ScalarProperty Name="Hora_Ordinaria_100" ColumnName="Hora_Ordinaria_100" />
+                <ScalarProperty Name="Seguro_Social" ColumnName="Seguro_Social" />
+                <ScalarProperty Name="AFP_CONFIA" ColumnName="AFP_CONFIA" />
+                <ScalarProperty Name="Dia_Hora_Asueto" ColumnName="Dia_Hora_Asueto" />
+                <ScalarProperty Name="Asueto_400" ColumnName="Asueto_400" />
+                <ScalarProperty Name="Dias_vacaciones" ColumnName="Dias_vacaciones" />
+                <ScalarProperty Name="Vacaciones_30" ColumnName="Vacaciones_30" />
+                <ScalarProperty Name="Dias_incapacitado" ColumnName="Dias_incapacitado" />
+                <ScalarProperty Name="Viaticos" ColumnName="Viaticos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ReporteQuincenalVentas" FunctionName="losnacimientosModel.Store.ReporteQuincenalVentas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="losnacimientosModel.ReporteQuincenalVentas_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Trabajador" ColumnName="Trabajador" />
+                <ScalarProperty Name="Dias_Remunerados" ColumnName="Dias_Remunerados" />
+                <ScalarProperty Name="Dias_Remunerados1" ColumnName="Dias_Remunerados1" />
+                <ScalarProperty Name="Dias_Asueto_Trabajados" ColumnName="Dias_Asueto_Trabajados" />
+                <ScalarProperty Name="Salario_Quincenal" ColumnName="Salario_Quincenal" />
+                <ScalarProperty Name="Anticipos" ColumnName="Anticipos" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Final" ColumnName="Fecha_Final" />
+                <ScalarProperty Name="Hora_Ordinaria_100" ColumnName="Hora_Ordinaria_100" />
+                <ScalarProperty Name="Seguro_Social" ColumnName="Seguro_Social" />
+                <ScalarProperty Name="AFP_CONFIA" ColumnName="AFP_CONFIA" />
+                <ScalarProperty Name="Asueto_400" ColumnName="Asueto_400" />
+                <ScalarProperty Name="Dias_vacaciones" ColumnName="Dias_vacaciones" />
+                <ScalarProperty Name="Vacaciones_30" ColumnName="Vacaciones_30" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VerificarPagoVacacion" FunctionName="losnacimientosModel.Store.VerificarPagoVacacion" />
+          <FunctionImportMapping FunctionImportName="VerificarPlanillaJefes" FunctionName="losnacimientosModel.Store.VerificarPlanillaJefes" />
+          <FunctionImportMapping FunctionImportName="VerificarPlanillaProduccion" FunctionName="losnacimientosModel.Store.VerificarPlanillaProduccion" />
+          <FunctionImportMapping FunctionImportName="VerificarPlanillaVentas" FunctionName="losnacimientosModel.Store.VerificarPlanillaVentas" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

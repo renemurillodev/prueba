@@ -12,6 +12,8 @@ namespace SistemaARD
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DBEntities : DbContext
     {
@@ -48,5 +50,346 @@ namespace SistemaARD
         public virtual DbSet<CategoriasAguinaldos> CategoriasAguinaldos { get; set; }
         public virtual DbSet<Pagos> Pagos { get; set; }
         public virtual DbSet<PagoVacaciones> PagoVacaciones { get; set; }
+    
+        public virtual ObjectResult<Nullable<int>> CambiarPassword(Nullable<int> id, string password)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(int));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("CambiarPassword", idParameter, passwordParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> DeterminarDepartamento(Nullable<int> idEmpleado)
+        {
+            var idEmpleadoParameter = idEmpleado.HasValue ?
+                new ObjectParameter("idEmpleado", idEmpleado) :
+                new ObjectParameter("idEmpleado", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("DeterminarDepartamento", idEmpleadoParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> IniciarSesion(string username, string password)
+        {
+            var usernameParameter = username != null ?
+                new ObjectParameter("Username", username) :
+                new ObjectParameter("Username", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("IniciarSesion", usernameParameter, passwordParameter);
+        }
+    
+        public virtual int InsertarAguinaldoAdministracion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoAdministracion");
+        }
+    
+        public virtual int InsertarAguinaldoMantenimiento()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoMantenimiento");
+        }
+    
+        public virtual int InsertarAguinaldoProduccion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoProduccion");
+        }
+    
+        public virtual int InsertarAguinaldoTransporte()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoTransporte");
+        }
+    
+        public virtual int InsertarAguinaldoVentas()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoVentas");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> InsertarIndemnizacion(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("InsertarIndemnizacion", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> InsertarUsuarios(string username, string password, Nullable<int> rol_Id)
+        {
+            var usernameParameter = username != null ?
+                new ObjectParameter("Username", username) :
+                new ObjectParameter("Username", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            var rol_IdParameter = rol_Id.HasValue ?
+                new ObjectParameter("Rol_Id", rol_Id) :
+                new ObjectParameter("Rol_Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("InsertarUsuarios", usernameParameter, passwordParameter, rol_IdParameter);
+        }
+    
+        public virtual ObjectResult<ListarAguinaldosAdministracion_Result> ListarAguinaldosAdministracion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarAguinaldosAdministracion_Result>("ListarAguinaldosAdministracion");
+        }
+    
+        public virtual ObjectResult<ListarAguinaldosMantenimiento_Result> ListarAguinaldosMantenimiento()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarAguinaldosMantenimiento_Result>("ListarAguinaldosMantenimiento");
+        }
+    
+        public virtual ObjectResult<ListarAguinaldosProduccion_Result> ListarAguinaldosProduccion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarAguinaldosProduccion_Result>("ListarAguinaldosProduccion");
+        }
+    
+        public virtual ObjectResult<ListarAguinaldosTransporte_Result> ListarAguinaldosTransporte()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarAguinaldosTransporte_Result>("ListarAguinaldosTransporte");
+        }
+    
+        public virtual ObjectResult<ListarAguinaldosVentas_Result> ListarAguinaldosVentas()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarAguinaldosVentas_Result>("ListarAguinaldosVentas");
+        }
+    
+        public virtual ObjectResult<ListarIndemnizaciones_Result> ListarIndemnizaciones()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizaciones_Result>("ListarIndemnizaciones");
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesAdministracion_Result> ListarIndemnizacionesAdministracion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesAdministracion_Result>("ListarIndemnizacionesAdministracion");
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesAdministracionConFiltro_Result> ListarIndemnizacionesAdministracionConFiltro(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesAdministracionConFiltro_Result>("ListarIndemnizacionesAdministracionConFiltro", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesMantenimiento_Result> ListarIndemnizacionesMantenimiento()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesMantenimiento_Result>("ListarIndemnizacionesMantenimiento");
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesMantenimientoConFiltro_Result> ListarIndemnizacionesMantenimientoConFiltro(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesMantenimientoConFiltro_Result>("ListarIndemnizacionesMantenimientoConFiltro", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesProduccion_Result> ListarIndemnizacionesProduccion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesProduccion_Result>("ListarIndemnizacionesProduccion");
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesProduccionConFiltro_Result> ListarIndemnizacionesProduccionConFiltro(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesProduccionConFiltro_Result>("ListarIndemnizacionesProduccionConFiltro", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesTransporte_Result> ListarIndemnizacionesTransporte()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesTransporte_Result>("ListarIndemnizacionesTransporte");
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesTransporteConFiltro_Result> ListarIndemnizacionesTransporteConFiltro(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesTransporteConFiltro_Result>("ListarIndemnizacionesTransporteConFiltro", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesVentas_Result> ListarIndemnizacionesVentas()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesVentas_Result>("ListarIndemnizacionesVentas");
+        }
+    
+        public virtual ObjectResult<ListarIndemnizacionesVentasConFiltro_Result> ListarIndemnizacionesVentasConFiltro(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarIndemnizacionesVentasConFiltro_Result>("ListarIndemnizacionesVentasConFiltro", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<ListarPagosVacacionesAdministracion_Result> ListarPagosVacacionesAdministracion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPagosVacacionesAdministracion_Result>("ListarPagosVacacionesAdministracion");
+        }
+    
+        public virtual ObjectResult<ListarPagosVacacionesMantenimiento_Result> ListarPagosVacacionesMantenimiento()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPagosVacacionesMantenimiento_Result>("ListarPagosVacacionesMantenimiento");
+        }
+    
+        public virtual ObjectResult<ListarPagosVacacionesProduccion_Result> ListarPagosVacacionesProduccion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPagosVacacionesProduccion_Result>("ListarPagosVacacionesProduccion");
+        }
+    
+        public virtual ObjectResult<ListarPagosVacacionesTransporte_Result> ListarPagosVacacionesTransporte()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPagosVacacionesTransporte_Result>("ListarPagosVacacionesTransporte");
+        }
+    
+        public virtual ObjectResult<ListarPagosVacacionesVentas_Result> ListarPagosVacacionesVentas()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPagosVacacionesVentas_Result>("ListarPagosVacacionesVentas");
+        }
+    
+        public virtual ObjectResult<ListarTodasIndemnizacionesFiltro_Result> ListarTodasIndemnizacionesFiltro(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarTodasIndemnizacionesFiltro_Result>("ListarTodasIndemnizacionesFiltro", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<ListarTodosPagosVacaciones_Result> ListarTodosPagosVacaciones()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarTodosPagosVacaciones_Result>("ListarTodosPagosVacaciones");
+        }
+    
+        public virtual ObjectResult<ListarUsuarios_Result> ListarUsuarios()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarUsuarios_Result>("ListarUsuarios");
+        }
+    
+        public virtual ObjectResult<reporte_planillaproduccion_Result> reporte_planillaproduccion(Nullable<int> id_planillaproduccion)
+        {
+            var id_planillaproduccionParameter = id_planillaproduccion.HasValue ?
+                new ObjectParameter("id_planillaproduccion", id_planillaproduccion) :
+                new ObjectParameter("id_planillaproduccion", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<reporte_planillaproduccion_Result>("reporte_planillaproduccion", id_planillaproduccionParameter);
+        }
+    
+        public virtual ObjectResult<reporte_planillaventa1_Result> reporte_planillaventa1(Nullable<int> id_planillaventas)
+        {
+            var id_planillaventasParameter = id_planillaventas.HasValue ?
+                new ObjectParameter("id_planillaventas", id_planillaventas) :
+                new ObjectParameter("id_planillaventas", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<reporte_planillaventa1_Result>("reporte_planillaventa1", id_planillaventasParameter);
+        }
+    
+        public virtual ObjectResult<ReporteQuincenalVentas_Result> ReporteQuincenalVentas(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
+        {
+            var desdeParameter = desde.HasValue ?
+                new ObjectParameter("Desde", desde) :
+                new ObjectParameter("Desde", typeof(System.DateTime));
+    
+            var hastaParameter = hasta.HasValue ?
+                new ObjectParameter("Hasta", hasta) :
+                new ObjectParameter("Hasta", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ReporteQuincenalVentas_Result>("ReporteQuincenalVentas", desdeParameter, hastaParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> VerificarPagoVacacion(Nullable<System.DateTime> fecha, Nullable<int> idEmpleado)
+        {
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            var idEmpleadoParameter = idEmpleado.HasValue ?
+                new ObjectParameter("idEmpleado", idEmpleado) :
+                new ObjectParameter("idEmpleado", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("VerificarPagoVacacion", fechaParameter, idEmpleadoParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> VerificarPlanillaJefes(Nullable<System.DateTime> fecha, Nullable<int> idEmpleado)
+        {
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            var idEmpleadoParameter = idEmpleado.HasValue ?
+                new ObjectParameter("IdEmpleado", idEmpleado) :
+                new ObjectParameter("IdEmpleado", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("VerificarPlanillaJefes", fechaParameter, idEmpleadoParameter);
+        }
+    
+        public virtual int VerificarPlanillaProduccion(Nullable<System.DateTime> fecha, Nullable<int> idEmpleado)
+        {
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            var idEmpleadoParameter = idEmpleado.HasValue ?
+                new ObjectParameter("IdEmpleado", idEmpleado) :
+                new ObjectParameter("IdEmpleado", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("VerificarPlanillaProduccion", fechaParameter, idEmpleadoParameter);
+        }
+    
+        public virtual int VerificarPlanillaVentas(Nullable<System.DateTime> fecha, Nullable<int> idEmpleado)
+        {
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            var idEmpleadoParameter = idEmpleado.HasValue ?
+                new ObjectParameter("IdEmpleado", idEmpleado) :
+                new ObjectParameter("IdEmpleado", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("VerificarPlanillaVentas", fechaParameter, idEmpleadoParameter);
+        }
     }
 }

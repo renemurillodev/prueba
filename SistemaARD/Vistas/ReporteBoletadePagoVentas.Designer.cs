@@ -1,6 +1,6 @@
 ﻿namespace SistemaARD
 {
-    partial class ReporteQuincenalPlanillaVentas
+    partial class ReporteBoletadePagoVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -32,19 +32,19 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.losnacimientosDataSet = new SistemaARD.losnacimientosDataSet();
-            this.ReporteQuincenalVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReporteQuincenalVentasTableAdapter = new SistemaARD.losnacimientosDataSetTableAdapters.ReporteQuincenalVentasTableAdapter();
+            this.reporte_planillaventa1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reporte_planillaventa1TableAdapter = new SistemaARD.losnacimientosDataSetTableAdapters.reporte_planillaventa1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.losnacimientosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteQuincenalVentasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_planillaventa1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "ReporteQuincenalVentas";
-            reportDataSource1.Value = this.ReporteQuincenalVentasBindingSource;
+            reportDataSource1.Name = "DataSetBOletaVentas";
+            reportDataSource1.Value = this.reporte_planillaventa1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaARD.ReporteQuincenalPlanillaVentas.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaARD.BoletadePagoVentas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -56,26 +56,26 @@
             this.losnacimientosDataSet.DataSetName = "losnacimientosDataSet";
             this.losnacimientosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ReporteQuincenalVentasBindingSource
+            // reporte_planillaventa1BindingSource
             // 
-            this.ReporteQuincenalVentasBindingSource.DataMember = "ReporteQuincenalVentas";
-            this.ReporteQuincenalVentasBindingSource.DataSource = this.losnacimientosDataSet;
+            this.reporte_planillaventa1BindingSource.DataMember = "reporte_planillaventa1";
+            this.reporte_planillaventa1BindingSource.DataSource = this.losnacimientosDataSet;
             // 
-            // ReporteQuincenalVentasTableAdapter
+            // reporte_planillaventa1TableAdapter
             // 
-            this.ReporteQuincenalVentasTableAdapter.ClearBeforeFill = true;
+            this.reporte_planillaventa1TableAdapter.ClearBeforeFill = true;
             // 
-            // ReporteQuincenalPlanillaVentas
+            // ReporteBoletadePagoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ReporteQuincenalPlanillaVentas";
-            this.Text = "ReporteQuincenalPlanillaVentas";
-            this.Load += new System.EventHandler(this.ReporteQuincenalPlanillaVentas_Load);
+            this.Name = "ReporteBoletadePagoVentas";
+            this.Text = "ReporteBoletadePagoVentas";
+            this.Load += new System.EventHandler(this.ReporteBoletadePagoVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.losnacimientosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteQuincenalVentasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_planillaventa1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,8 +83,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource ReporteQuincenalVentasBindingSource;
+        private System.Windows.Forms.BindingSource reporte_planillaventa1BindingSource;
         private losnacimientosDataSet losnacimientosDataSet;
-        private losnacimientosDataSetTableAdapters.ReporteQuincenalVentasTableAdapter ReporteQuincenalVentasTableAdapter;
+        private losnacimientosDataSetTableAdapters.reporte_planillaventa1TableAdapter reporte_planillaventa1TableAdapter;
     }
 }

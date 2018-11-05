@@ -10,33 +10,26 @@ using System.Windows.Forms;
 
 namespace SistemaARD
 {
-    public partial class ReporteQuincenalPlanillaVentas : Form
+    public partial class ReporteBoletadePagoVentas : Form
     {
-        public ReporteQuincenalPlanillaVentas()
+        public ReporteBoletadePagoVentas()
         {
             InitializeComponent();
         }
-        private DateTime _FechaInicio;
+        private int _idPlanillaVenta;
 
-        public DateTime FechaInicio
+        public int idPlanillaVenta
         {
-            get { return _FechaInicio; }
-            set { _FechaInicio = value; }
-        }
-        private DateTime _FechaFinal;
-
-        public DateTime FechaFinal
-        {
-            get { return _FechaFinal; }
-            set { _FechaFinal = value; }
+            get { return _idPlanillaVenta; }
+            set { _idPlanillaVenta = value; }
         }
 
-        private void ReporteQuincenalPlanillaVentas_Load(object sender, EventArgs e)
+        private void ReporteBoletadePagoVentas_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'losnacimientosDataSet.ReporteQuincenalVentas' Puede moverla o quitarla según sea necesario.
             try
             {
-                this.ReporteQuincenalVentasTableAdapter.Fill(this.losnacimientosDataSet.ReporteQuincenalVentas, FechaInicio, FechaFinal);
+                this.reporte_planillaventa1TableAdapter.Fill(this.losnacimientosDataSet.reporte_planillaventa1, idPlanillaVenta);
 
                 this.reportViewer1.RefreshReport();
             }
@@ -44,8 +37,7 @@ namespace SistemaARD
             {
                 this.reportViewer1.RefreshReport();
             }
-
-            this.reportViewer1.RefreshReport();
+            MessageBox.Show(Convert.ToString(_idPlanillaVenta));
         }
     }
 }

@@ -47,8 +47,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TabVendodores = new System.Windows.Forms.TabControl();
             this.TabVentas = new System.Windows.Forms.TabPage();
-            this.dtpfecha_final_reportemensual = new System.Windows.Forms.DateTimePicker();
-            this.dtpfecha_inicio_reportemensual = new System.Windows.Forms.DateTimePicker();
+            this.dtpfecha_final_reportemensual_ventas = new System.Windows.Forms.DateTimePicker();
+            this.dtpfecha_inicio_reportemensual_ventas = new System.Windows.Forms.DateTimePicker();
             this.btnReporteMensualVentas = new System.Windows.Forms.Button();
             this.btnGenerarReporteVentas = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
@@ -156,8 +156,8 @@
             // TabVentas
             // 
             this.TabVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.TabVentas.Controls.Add(this.dtpfecha_final_reportemensual);
-            this.TabVentas.Controls.Add(this.dtpfecha_inicio_reportemensual);
+            this.TabVentas.Controls.Add(this.dtpfecha_final_reportemensual_ventas);
+            this.TabVentas.Controls.Add(this.dtpfecha_inicio_reportemensual_ventas);
             this.TabVentas.Controls.Add(this.btnReporteMensualVentas);
             this.TabVentas.Controls.Add(this.btnGenerarReporteVentas);
             this.TabVentas.Controls.Add(this.dgvVentas);
@@ -168,21 +168,21 @@
             this.TabVentas.TabIndex = 0;
             this.TabVentas.Text = "Ventas";
             // 
-            // dtpfecha_final_reportemensual
+            // dtpfecha_final_reportemensual_ventas
             // 
-            this.dtpfecha_final_reportemensual.Location = new System.Drawing.Point(32, 50);
-            this.dtpfecha_final_reportemensual.Name = "dtpfecha_final_reportemensual";
-            this.dtpfecha_final_reportemensual.Size = new System.Drawing.Size(200, 20);
-            this.dtpfecha_final_reportemensual.TabIndex = 12;
-            this.dtpfecha_final_reportemensual.Value = new System.DateTime(2018, 10, 29, 0, 0, 0, 0);
+            this.dtpfecha_final_reportemensual_ventas.Location = new System.Drawing.Point(32, 50);
+            this.dtpfecha_final_reportemensual_ventas.Name = "dtpfecha_final_reportemensual_ventas";
+            this.dtpfecha_final_reportemensual_ventas.Size = new System.Drawing.Size(200, 20);
+            this.dtpfecha_final_reportemensual_ventas.TabIndex = 12;
+            this.dtpfecha_final_reportemensual_ventas.Value = new System.DateTime(2018, 10, 29, 0, 0, 0, 0);
             // 
-            // dtpfecha_inicio_reportemensual
+            // dtpfecha_inicio_reportemensual_ventas
             // 
-            this.dtpfecha_inicio_reportemensual.Location = new System.Drawing.Point(32, 25);
-            this.dtpfecha_inicio_reportemensual.Name = "dtpfecha_inicio_reportemensual";
-            this.dtpfecha_inicio_reportemensual.Size = new System.Drawing.Size(200, 20);
-            this.dtpfecha_inicio_reportemensual.TabIndex = 11;
-            this.dtpfecha_inicio_reportemensual.Value = new System.DateTime(2018, 10, 29, 0, 0, 0, 0);
+            this.dtpfecha_inicio_reportemensual_ventas.Location = new System.Drawing.Point(32, 25);
+            this.dtpfecha_inicio_reportemensual_ventas.Name = "dtpfecha_inicio_reportemensual_ventas";
+            this.dtpfecha_inicio_reportemensual_ventas.Size = new System.Drawing.Size(200, 20);
+            this.dtpfecha_inicio_reportemensual_ventas.TabIndex = 11;
+            this.dtpfecha_inicio_reportemensual_ventas.Value = new System.DateTime(2018, 10, 29, 0, 0, 0, 0);
             // 
             // btnReporteMensualVentas
             // 
@@ -192,6 +192,7 @@
             this.btnReporteMensualVentas.TabIndex = 10;
             this.btnReporteMensualVentas.Text = "Generar Reporte Quincenal";
             this.btnReporteMensualVentas.UseVisualStyleBackColor = true;
+            this.btnReporteMensualVentas.Click += new System.EventHandler(this.btnReporteMensualVentas_Click);
             // 
             // btnGenerarReporteVentas
             // 
@@ -209,6 +210,7 @@
             this.btnGenerarReporteVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarReporteVentas.UseVisualStyleBackColor = true;
             this.btnGenerarReporteVentas.Visible = false;
+            this.btnGenerarReporteVentas.Click += new System.EventHandler(this.btnGenerarReporteVentas_Click);
             // 
             // dgvVentas
             // 
@@ -257,6 +259,7 @@
             this.dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVentas.Size = new System.Drawing.Size(757, 298);
             this.dgvVentas.TabIndex = 1;
+            this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
             // Id
             // 
@@ -934,6 +937,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FPlanillas";
             this.Text = "FPlanillas";
+            this.Load += new System.EventHandler(this.FPlanillas_Load);
             this.TabVendodores.ResumeLayout(false);
             this.TabVentas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
@@ -955,8 +959,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl TabVendodores;
         private System.Windows.Forms.TabPage TabVentas;
-        private System.Windows.Forms.DateTimePicker dtpfecha_final_reportemensual;
-        private System.Windows.Forms.DateTimePicker dtpfecha_inicio_reportemensual;
+        private System.Windows.Forms.DateTimePicker dtpfecha_final_reportemensual_ventas;
+        private System.Windows.Forms.DateTimePicker dtpfecha_inicio_reportemensual_ventas;
         private System.Windows.Forms.Button btnReporteMensualVentas;
         private System.Windows.Forms.Button btnGenerarReporteVentas;
         public System.Windows.Forms.DataGridView dgvVentas;

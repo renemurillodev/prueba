@@ -19,9 +19,15 @@ namespace SistemaARD
         public decimal Pago_diario { get; set; }
         public int Dias_laborados { get; set; }
         public decimal Anticipos { get; set; }
-        public System.DateTime Fecha { get; set; }
         public int Categoria_Id { get; set; }
         public Nullable<int> Horas_extra { get; set; }
+        public System.DateTime Fecha_Inicio { get; set; }
+        public Nullable<System.DateTime> Fecha_Final { get; set; }
+        public Nullable<int> Dias_asueto { get; set; }
+        public Nullable<int> Dias_vacaciones { get; set; }
+        public Nullable<int> Dias_incapacitado { get; set; }
+        public Nullable<decimal> Viaticos { get; set; }
+        public Nullable<int> Dias_perdidos { get; set; }
     
         public virtual CategoriasPlanillas CategoriasPlanillas { get; set; }
         public virtual Empleados Empleados { get; set; }
