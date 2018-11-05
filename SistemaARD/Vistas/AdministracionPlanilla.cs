@@ -658,16 +658,25 @@ namespace SistemaARD.Vistas
                 {
                     try
                     {
+                        int res;
                         using (DBEntities db = new DBEntities())
                         {
                             db.Database.Connection.Open();
                             System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                             cmd.CommandText = "InsertarAguinaldoVentas";
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.ExecuteScalar();
+                            cmd.Parameters.Add(new SqlParameter("Fecha", DateTime.Now));
+                            res = (int)cmd.ExecuteScalar();
                             db.Database.Connection.Close();
                         }
-                        MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        if (res == 0)
+                        {
+                            MessageBox.Show("Ya existe un pago de aguinaldo generado para este departamento en el corriente año", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -678,17 +687,25 @@ namespace SistemaARD.Vistas
                 {
                     try
                     {
+                        int res;
                         using (DBEntities db = new DBEntities())
                         {
                             db.Database.Connection.Open();
                             System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                             cmd.CommandText = "InsertarAguinaldoTransporte";
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.ExecuteScalar();
+                            cmd.Parameters.Add(new SqlParameter("Fecha", DateTime.Now));
+                            res = (int)cmd.ExecuteScalar();
                             db.Database.Connection.Close();
                         }
-                        
-                        MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        if (res == 0)
+                        {
+                            MessageBox.Show("Ya existe un pago de aguinaldo generado para este departamento en el corriente año", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -699,16 +716,25 @@ namespace SistemaARD.Vistas
                 {
                     try
                     {
+                        int res;
                         using (DBEntities db = new DBEntities())
                         {
                             db.Database.Connection.Open();
                             System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                             cmd.CommandText = "InsertarAguinaldoProduccion";
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.ExecuteScalar();
+                            cmd.Parameters.Add(new SqlParameter("Fecha", DateTime.Now));
+                            res = (int)cmd.ExecuteScalar();
                             db.Database.Connection.Close();
                         }
-                        MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        if (res == 0)
+                        {
+                            MessageBox.Show("Ya existe un pago de aguinaldo generado para este departamento en el corriente año", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -719,16 +745,25 @@ namespace SistemaARD.Vistas
                 {
                     try
                     {
+                        int res;
                         using (DBEntities db = new DBEntities())
                         {
                             db.Database.Connection.Open();
                             System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                             cmd.CommandText = "InsertarAguinaldoMantenimiento";
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.ExecuteScalar();
+                            cmd.Parameters.Add(new SqlParameter("Fecha", DateTime.Now));
+                            res = (int)cmd.ExecuteScalar();
                             db.Database.Connection.Close();
                         }
-                        MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        if (res == 0)
+                        {
+                            MessageBox.Show("Ya existe un pago de aguinaldo generado para este departamento en el corriente año", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -739,16 +774,26 @@ namespace SistemaARD.Vistas
                 {
                     try
                     {
+                        int res;
                         using (DBEntities db = new DBEntities())
                         {
                             db.Database.Connection.Open();
                             System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
                             cmd.CommandText = "InsertarAguinaldoAdministracion";
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.ExecuteScalar();
+                            cmd.Parameters.Add(new SqlParameter("Fecha", DateTime.Now));
+                            res = (int)cmd.ExecuteScalar();
                             db.Database.Connection.Close();
                         }
-                        MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        if (res == 0)
+                        {
+                            MessageBox.Show("Ya existe un pago de aguinaldo generado para este departamento en el corriente año", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show(String.Format("Aguinaldo generado correctamente para el departamento de {0}", textBox1.Text));
+                        }
                     }
                     catch (Exception ex)
                     {

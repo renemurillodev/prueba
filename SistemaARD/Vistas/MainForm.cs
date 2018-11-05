@@ -166,5 +166,10 @@ namespace SistemaARD
             //this.Hide();
             mostraraguinaldos.Show();
         }
+
+        private void btnIndemnizaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<ListaIndemnizaciones>();
+        }
     }
 }

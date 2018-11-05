@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministracionPlanilla));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -62,19 +63,23 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lblHorasDiasIncompletos = new System.Windows.Forms.Label();
+            this.txtHorasDiasIncompletos = new System.Windows.Forms.TextBox();
+            this.lblDiasAsuetos = new System.Windows.Forms.Label();
+            this.txtDiasAsuetos = new System.Windows.Forms.TextBox();
+            this.lblDiasPerdidos = new System.Windows.Forms.Label();
+            this.txtDiasPerdidos = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAguinaldo = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaFinal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblDiasPerdidos = new System.Windows.Forms.Label();
-            this.txtDiasPerdidos = new System.Windows.Forms.TextBox();
-            this.lblHorasDiasIncompletos = new System.Windows.Forms.Label();
-            this.txtHorasDiasIncompletos = new System.Windows.Forms.TextBox();
-            this.lblDiasAsuetos = new System.Windows.Forms.Label();
-            this.txtDiasAsuetos = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.lblViaticos = new System.Windows.Forms.Label();
             this.txtViaticos = new System.Windows.Forms.TextBox();
@@ -82,10 +87,6 @@
             this.txtVacaciones = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtIncapacitado = new System.Windows.Forms.TextBox();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaInicio = new System.Windows.Forms.Label();
-            this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaFinal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -127,6 +128,14 @@
             this.Apellidos,
             this.Cargo_Id,
             this.Cargo});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView1.Location = new System.Drawing.Point(6, 20);
             this.dataGridView1.Name = "dataGridView1";
@@ -497,6 +506,60 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Dias y horas laborados";
             // 
+            // lblHorasDiasIncompletos
+            // 
+            this.lblHorasDiasIncompletos.AutoSize = true;
+            this.lblHorasDiasIncompletos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorasDiasIncompletos.Location = new System.Drawing.Point(8, 94);
+            this.lblHorasDiasIncompletos.Name = "lblHorasDiasIncompletos";
+            this.lblHorasDiasIncompletos.Size = new System.Drawing.Size(141, 13);
+            this.lblHorasDiasIncompletos.TabIndex = 67;
+            this.lblHorasDiasIncompletos.Text = "Horas Dias Incompletos";
+            // 
+            // txtHorasDiasIncompletos
+            // 
+            this.txtHorasDiasIncompletos.Location = new System.Drawing.Point(160, 88);
+            this.txtHorasDiasIncompletos.Name = "txtHorasDiasIncompletos";
+            this.txtHorasDiasIncompletos.Size = new System.Drawing.Size(43, 21);
+            this.txtHorasDiasIncompletos.TabIndex = 68;
+            this.txtHorasDiasIncompletos.Text = "0";
+            // 
+            // lblDiasAsuetos
+            // 
+            this.lblDiasAsuetos.AutoSize = true;
+            this.lblDiasAsuetos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasAsuetos.Location = new System.Drawing.Point(7, 61);
+            this.lblDiasAsuetos.Name = "lblDiasAsuetos";
+            this.lblDiasAsuetos.Size = new System.Drawing.Size(146, 13);
+            this.lblDiasAsuetos.TabIndex = 65;
+            this.lblDiasAsuetos.Text = "Días Asuetos Laborados";
+            // 
+            // txtDiasAsuetos
+            // 
+            this.txtDiasAsuetos.Location = new System.Drawing.Point(159, 55);
+            this.txtDiasAsuetos.Name = "txtDiasAsuetos";
+            this.txtDiasAsuetos.Size = new System.Drawing.Size(43, 21);
+            this.txtDiasAsuetos.TabIndex = 66;
+            this.txtDiasAsuetos.Text = "0";
+            // 
+            // lblDiasPerdidos
+            // 
+            this.lblDiasPerdidos.AutoSize = true;
+            this.lblDiasPerdidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasPerdidos.Location = new System.Drawing.Point(167, 29);
+            this.lblDiasPerdidos.Name = "lblDiasPerdidos";
+            this.lblDiasPerdidos.Size = new System.Drawing.Size(87, 13);
+            this.lblDiasPerdidos.TabIndex = 63;
+            this.lblDiasPerdidos.Text = "Días Perdidos";
+            // 
+            // txtDiasPerdidos
+            // 
+            this.txtDiasPerdidos.Location = new System.Drawing.Point(260, 24);
+            this.txtDiasPerdidos.Name = "txtDiasPerdidos";
+            this.txtDiasPerdidos.Size = new System.Drawing.Size(43, 21);
+            this.txtDiasPerdidos.TabIndex = 64;
+            this.txtDiasPerdidos.Text = "0";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
@@ -570,6 +633,49 @@
             this.groupBox8.TabIndex = 32;
             this.groupBox8.TabStop = false;
             // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(97, 16);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(198, 20);
+            this.dtpFechaInicio.TabIndex = 44;
+            this.dtpFechaInicio.Value = new System.DateTime(2018, 10, 24, 0, 0, 0, 0);
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicio.Location = new System.Drawing.Point(8, 16);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(77, 13);
+            this.lblFechaInicio.TabIndex = 43;
+            this.lblFechaInicio.Text = "Fecha Inicio";
+            // 
+            // dtpFechaFinal
+            // 
+            this.dtpFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaFinal.Location = new System.Drawing.Point(97, 41);
+            this.dtpFechaFinal.Name = "dtpFechaFinal";
+            this.dtpFechaFinal.Size = new System.Drawing.Size(198, 20);
+            this.dtpFechaFinal.TabIndex = 42;
+            // 
+            // lblFechaFinal
+            // 
+            this.lblFechaFinal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFechaFinal.AutoSize = true;
+            this.lblFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFinal.Location = new System.Drawing.Point(8, 41);
+            this.lblFechaFinal.Name = "lblFechaFinal";
+            this.lblFechaFinal.Size = new System.Drawing.Size(73, 13);
+            this.lblFechaFinal.TabIndex = 41;
+            this.lblFechaFinal.Text = "Fecha Final";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
@@ -577,60 +683,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(130, 1);
             this.panel1.TabIndex = 61;
-            // 
-            // lblDiasPerdidos
-            // 
-            this.lblDiasPerdidos.AutoSize = true;
-            this.lblDiasPerdidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiasPerdidos.Location = new System.Drawing.Point(167, 29);
-            this.lblDiasPerdidos.Name = "lblDiasPerdidos";
-            this.lblDiasPerdidos.Size = new System.Drawing.Size(87, 13);
-            this.lblDiasPerdidos.TabIndex = 63;
-            this.lblDiasPerdidos.Text = "Días Perdidos";
-            // 
-            // txtDiasPerdidos
-            // 
-            this.txtDiasPerdidos.Location = new System.Drawing.Point(260, 24);
-            this.txtDiasPerdidos.Name = "txtDiasPerdidos";
-            this.txtDiasPerdidos.Size = new System.Drawing.Size(43, 21);
-            this.txtDiasPerdidos.TabIndex = 64;
-            this.txtDiasPerdidos.Text = "0";
-            // 
-            // lblHorasDiasIncompletos
-            // 
-            this.lblHorasDiasIncompletos.AutoSize = true;
-            this.lblHorasDiasIncompletos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasDiasIncompletos.Location = new System.Drawing.Point(8, 94);
-            this.lblHorasDiasIncompletos.Name = "lblHorasDiasIncompletos";
-            this.lblHorasDiasIncompletos.Size = new System.Drawing.Size(141, 13);
-            this.lblHorasDiasIncompletos.TabIndex = 67;
-            this.lblHorasDiasIncompletos.Text = "Horas Dias Incompletos";
-            // 
-            // txtHorasDiasIncompletos
-            // 
-            this.txtHorasDiasIncompletos.Location = new System.Drawing.Point(160, 88);
-            this.txtHorasDiasIncompletos.Name = "txtHorasDiasIncompletos";
-            this.txtHorasDiasIncompletos.Size = new System.Drawing.Size(43, 21);
-            this.txtHorasDiasIncompletos.TabIndex = 68;
-            this.txtHorasDiasIncompletos.Text = "0";
-            // 
-            // lblDiasAsuetos
-            // 
-            this.lblDiasAsuetos.AutoSize = true;
-            this.lblDiasAsuetos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiasAsuetos.Location = new System.Drawing.Point(7, 61);
-            this.lblDiasAsuetos.Name = "lblDiasAsuetos";
-            this.lblDiasAsuetos.Size = new System.Drawing.Size(146, 13);
-            this.lblDiasAsuetos.TabIndex = 65;
-            this.lblDiasAsuetos.Text = "Días Asuetos Laborados";
-            // 
-            // txtDiasAsuetos
-            // 
-            this.txtDiasAsuetos.Location = new System.Drawing.Point(159, 55);
-            this.txtDiasAsuetos.Name = "txtDiasAsuetos";
-            this.txtDiasAsuetos.Size = new System.Drawing.Size(43, 21);
-            this.txtDiasAsuetos.TabIndex = 66;
-            this.txtDiasAsuetos.Text = "0";
             // 
             // groupBox9
             // 
@@ -712,49 +764,6 @@
             this.txtIncapacitado.Size = new System.Drawing.Size(44, 21);
             this.txtIncapacitado.TabIndex = 31;
             this.txtIncapacitado.Text = "0";
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(97, 16);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(198, 20);
-            this.dtpFechaInicio.TabIndex = 44;
-            this.dtpFechaInicio.Value = new System.DateTime(2018, 10, 24, 0, 0, 0, 0);
-            // 
-            // lblFechaInicio
-            // 
-            this.lblFechaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.Location = new System.Drawing.Point(8, 16);
-            this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(77, 13);
-            this.lblFechaInicio.TabIndex = 43;
-            this.lblFechaInicio.Text = "Fecha Inicio";
-            // 
-            // dtpFechaFinal
-            // 
-            this.dtpFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFinal.Location = new System.Drawing.Point(97, 41);
-            this.dtpFechaFinal.Name = "dtpFechaFinal";
-            this.dtpFechaFinal.Size = new System.Drawing.Size(198, 20);
-            this.dtpFechaFinal.TabIndex = 42;
-            // 
-            // lblFechaFinal
-            // 
-            this.lblFechaFinal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFechaFinal.AutoSize = true;
-            this.lblFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFinal.Location = new System.Drawing.Point(8, 41);
-            this.lblFechaFinal.Name = "lblFechaFinal";
-            this.lblFechaFinal.Size = new System.Drawing.Size(73, 13);
-            this.lblFechaFinal.TabIndex = 41;
-            this.lblFechaFinal.Text = "Fecha Final";
             // 
             // AdministracionPlanilla
             // 

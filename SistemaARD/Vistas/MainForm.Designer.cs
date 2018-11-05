@@ -394,6 +394,7 @@
             this.btnIndemnizaciones.Text = "INDEMNIZACIÓN";
             this.btnIndemnizaciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIndemnizaciones.UseVisualStyleBackColor = true;
+            this.btnIndemnizaciones.Click += new System.EventHandler(this.btnIndemnizaciones_Click);
             // 
             // btnReportes
             // 

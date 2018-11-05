@@ -118,5 +118,39 @@ namespace SistemaARD.Vistas
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnIniciar_Enter(object sender, EventArgs e)
+        {
+            try
+            {
+                int res;
+                using (DBEntities db = new DBEntities())
+                {
+                    db.Database.Connection.Open();
+                    System.Data.Common.DbCommand cmd = db.Database.Connection.CreateCommand();
+                    cmd.CommandText = "IniciarSesion";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("Username", txtUsername.Text.Trim()));
+                    cmd.Parameters.Add(new SqlParameter("Password", txtPassword.Text.Trim()));
+                    res = (int)cmd.ExecuteScalar();
+                    db.Database.Connection.Close();
+                }
+                if (res == 0)
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MainForm principal = new MainForm();
+                    this.Hide();
+                    principal.Show();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

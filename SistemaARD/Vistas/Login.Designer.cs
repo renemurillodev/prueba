@@ -57,7 +57,7 @@
             this.txtUsername.Location = new System.Drawing.Point(9, 180);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(280, 21);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "USUARIO";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
@@ -72,7 +72,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(280, 21);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "CONTRASEÑA";
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
@@ -87,10 +87,11 @@
             this.btnIniciar.Location = new System.Drawing.Point(9, 323);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(280, 30);
-            this.btnIniciar.TabIndex = 4;
+            this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            this.btnIniciar.Enter += new System.EventHandler(this.btnIniciar_Enter);
             // 
             // label1
             // 

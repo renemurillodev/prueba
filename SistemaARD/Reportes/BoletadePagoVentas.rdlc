@@ -17,7 +17,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox80</rd:DefaultName>
-        <Top>18.40582cm</Top>
+        <Top>26.34332cm</Top>
         <Left>1.68622cm</Left>
         <Height>0.6cm</Height>
         <Width>2.83073cm</Width>
@@ -32,7 +32,7 @@
         </Style>
       </Textbox>
       <Line Name="Line10">
-        <Top>18.86444cm</Top>
+        <Top>26.80194cm</Top>
         <Left>4.26934cm</Left>
         <Height>0cm</Height>
         <Width>6.15477cm</Width>
@@ -58,7 +58,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>7.16423cm</Top>
+        <Top>1.44923cm</Top>
         <Left>1.53492cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -89,7 +89,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>7.76423cm</Top>
+        <Top>2.04923cm</Top>
         <Left>1.53491cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -120,7 +120,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>8.36422cm</Top>
+        <Top>2.64922cm</Top>
         <Left>1.53491cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -153,7 +153,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>8.96423cm</Top>
+        <Top>3.24923cm</Top>
         <Left>1.53491cm</Left>
         <Height>0.6cm</Height>
         <Width>3.10854cm</Width>
@@ -184,7 +184,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>9.56063cm</Top>
+        <Top>3.84563cm</Top>
         <Left>1.53492cm</Left>
         <Height>0.6cm</Height>
         <Width>3.53186cm</Width>
@@ -215,7 +215,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>10.16064cm</Top>
+        <Top>4.44564cm</Top>
         <Left>1.53492cm</Left>
         <Height>0.6cm</Height>
         <Width>2.49999cm</Width>
@@ -246,7 +246,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>10.76062cm</Top>
+        <Top>5.04562cm</Top>
         <Left>1.53492cm</Left>
         <Height>0.6cm</Height>
         <Width>2.85908cm</Width>
@@ -266,7 +266,7 @@
         <Source>Embedded</Source>
         <Value>LogoLosNacimientos</Value>
         <Sizing>Fit</Sizing>
-        <Top>5.75918cm</Top>
+        <Top>0.04418cm</Top>
         <Left>1.67038cm</Left>
         <Height>1.21938cm</Height>
         <Width>1.5cm</Width>
@@ -296,7 +296,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox50</rd:DefaultName>
-        <Top>11.69248cm</Top>
+        <Top>5.97748cm</Top>
         <Left>1.58749cm</Left>
         <Height>0.6cm</Height>
         <Width>6.7811cm</Width>
@@ -326,7 +326,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>12.26037cm</Top>
+        <Top>6.54537cm</Top>
         <Left>1.69332cm</Left>
         <Height>0.6cm</Height>
         <Width>6.67528cm</Width>
@@ -356,7 +356,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>12.86036cm</Top>
+        <Top>7.14536cm</Top>
         <Left>1.69332cm</Left>
         <Height>0.6cm</Height>
         <Width>6.67528cm</Width>
@@ -386,7 +386,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>15.26037cm</Top>
+        <Top>9.54537cm</Top>
         <Left>1.70101cm</Left>
         <Height>0.6cm</Height>
         <Width>6.67528cm</Width>
@@ -416,7 +416,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>15.86036cm</Top>
+        <Top>10.14536cm</Top>
         <Left>1.701cm</Left>
         <Height>0.6cm</Height>
         <Width>6.67528cm</Width>
@@ -446,7 +446,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>16.46036cm</Top>
+        <Top>10.74536cm</Top>
         <Left>1.69332cm</Left>
         <Height>0.55688cm</Height>
         <Width>6.67528cm</Width>
@@ -476,7 +476,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>13.46036cm</Top>
+        <Top>7.74536cm</Top>
         <Left>1.69332cm</Left>
         <Height>0.6cm</Height>
         <Width>6.67528cm</Width>
@@ -506,7 +506,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>14.06037cm</Top>
+        <Top>8.34537cm</Top>
         <Left>1.69332cm</Left>
         <Height>0.6cm</Height>
         <Width>6.67528cm</Width>
@@ -540,7 +540,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>5.75918cm</Top>
+        <Top>0.04418cm</Top>
         <Left>3.2547cm</Left>
         <Height>0.6cm</Height>
         <Width>7.15667cm</Width>
@@ -575,7 +575,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>5.75918cm</Top>
+        <Top>0.04418cm</Top>
         <Left>13.25267cm</Left>
         <Height>0.6cm</Height>
         <Width>6.80242cm</Width>
@@ -610,7 +610,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>11.69248cm</Top>
+        <Top>5.97748cm</Top>
         <Left>11.99887cm</Left>
         <Height>0.6cm</Height>
         <Width>4.48534cm</Width>
@@ -644,7 +644,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox70</rd:DefaultName>
-        <Top>11.6572cm</Top>
+        <Top>5.9422cm</Top>
         <Left>16.48421cm</Left>
         <Height>0.6cm</Height>
         <Width>3.30628cm</Width>
@@ -678,7 +678,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>11.69248cm</Top>
+        <Top>5.97748cm</Top>
         <Left>8.40386cm</Left>
         <Height>0.6cm</Height>
         <Width>3.595cm</Width>
@@ -710,7 +710,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>8.96423cm</Top>
+        <Top>3.24923cm</Top>
         <Left>13.11171cm</Left>
         <Height>0.6cm</Height>
         <Width>2.9078cm</Width>
@@ -743,7 +743,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>9.56063cm</Top>
+        <Top>3.84563cm</Top>
         <Left>13.11171cm</Left>
         <Height>0.6cm</Height>
         <Width>3.24965cm</Width>
@@ -776,7 +776,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>10.16064cm</Top>
+        <Top>4.44564cm</Top>
         <Left>13.11171cm</Left>
         <Height>0.6cm</Height>
         <Width>3.99264cm</Width>
@@ -809,7 +809,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>10.76062cm</Top>
+        <Top>5.04562cm</Top>
         <Left>13.11171cm</Left>
         <Height>0.6cm</Height>
         <Width>2.94307cm</Width>
@@ -840,7 +840,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>8.96064cm</Top>
+        <Top>3.24564cm</Top>
         <Left>8.21236cm</Left>
         <Height>0.6cm</Height>
         <Width>1.94437cm</Width>
@@ -873,7 +873,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Trabajador</rd:DefaultName>
-        <Top>7.76423cm</Top>
+        <Top>2.04923cm</Top>
         <Left>5.13734cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -906,7 +906,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Nombre</rd:DefaultName>
-        <Top>8.36422cm</Top>
+        <Top>2.64922cm</Top>
         <Left>5.13734cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -941,7 +941,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Salario_Quincenal</rd:DefaultName>
-        <Top>8.96064cm</Top>
+        <Top>3.24564cm</Top>
         <Left>5.13734cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -975,7 +975,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Dias_Remunerados</rd:DefaultName>
-        <Top>9.56063cm</Top>
+        <Top>3.84563cm</Top>
         <Left>5.13734cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1008,7 +1008,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Salario_Diario</rd:DefaultName>
-        <Top>8.96064cm</Top>
+        <Top>3.24564cm</Top>
         <Left>10.22729cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1044,7 +1044,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Salario_Hora</rd:DefaultName>
-        <Top>8.96064cm</Top>
+        <Top>3.24564cm</Top>
         <Left>17.08618cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1078,7 +1078,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Dias_Perdidos1</rd:DefaultName>
-        <Top>10.16064cm</Top>
+        <Top>4.44564cm</Top>
         <Left>5.13734cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1111,7 +1111,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Dias_Vacaciones1</rd:DefaultName>
-        <Top>10.76062cm</Top>
+        <Top>5.04562cm</Top>
         <Left>5.13734cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1144,7 +1144,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Dias_Incapacitado</rd:DefaultName>
-        <Top>9.56063cm</Top>
+        <Top>3.84563cm</Top>
         <Left>17.08618cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1177,7 +1177,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Dias_Asueto_Trabajados</rd:DefaultName>
-        <Top>10.16064cm</Top>
+        <Top>4.44564cm</Top>
         <Left>17.08617cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1210,7 +1210,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Horas_Laboradas</rd:DefaultName>
-        <Top>10.76062cm</Top>
+        <Top>5.04562cm</Top>
         <Left>17.08618cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -1243,7 +1243,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Horas_Laboradas</rd:DefaultName>
-        <Top>12.26037cm</Top>
+        <Top>6.54537cm</Top>
         <Left>8.5097cm</Left>
         <Height>0.6cm</Height>
         <Width>3.48917cm</Width>
@@ -1273,13 +1273,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hora_Ordinaria_100</rd:DefaultName>
-        <Top>12.26037cm</Top>
-        <Left>12.16834cm</Left>
+        <Top>6.54537cm</Top>
+        <Left>12.80334cm</Left>
         <Height>0.6cm</Height>
         <Width>4.31587cm</Width>
         <ZIndex>40</ZIndex>
@@ -1312,7 +1312,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Horas_extra</rd:DefaultName>
-        <Top>12.86036cm</Top>
+        <Top>7.14536cm</Top>
         <Left>8.5097cm</Left>
         <Height>0.6cm</Height>
         <Width>3.48917cm</Width>
@@ -1342,13 +1342,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Horas_Extras_200</rd:DefaultName>
-        <Top>12.86036cm</Top>
-        <Left>12.16834cm</Left>
+        <Top>7.14536cm</Top>
+        <Left>12.80334cm</Left>
         <Height>0.6cm</Height>
         <Width>4.31587cm</Width>
         <ZIndex>42</ZIndex>
@@ -1378,13 +1378,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Seguro_Social</rd:DefaultName>
-        <Top>15.33092cm</Top>
-        <Left>16.66334cm</Left>
+        <Top>9.61592cm</Top>
+        <Left>17.41581cm</Left>
         <Height>0.6cm</Height>
         <Width>3.1452cm</Width>
         <ZIndex>43</ZIndex>
@@ -1414,13 +1414,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>AFP_CONFIA</rd:DefaultName>
-        <Top>15.93093cm</Top>
-        <Left>16.66334cm</Left>
+        <Top>10.21593cm</Top>
+        <Left>17.41581cm</Left>
         <Height>0.6cm</Height>
         <Width>3.13746cm</Width>
         <ZIndex>44</ZIndex>
@@ -1450,13 +1450,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Anticipos</rd:DefaultName>
-        <Top>16.54274cm</Top>
-        <Left>16.66334cm</Left>
+        <Top>10.82774cm</Top>
+        <Left>17.41581cm</Left>
         <Height>0.6cm</Height>
         <Width>3.13746cm</Width>
         <ZIndex>45</ZIndex>
@@ -1473,7 +1473,7 @@
         </Style>
       </Textbox>
       <Line Name="Line4">
-        <Top>12.29248cm</Top>
+        <Top>6.57748cm</Top>
         <Left>1.53492cm</Left>
         <Height>0cm</Height>
         <Width>18.25557cm</Width>
@@ -1485,7 +1485,7 @@
         </Style>
       </Line>
       <Line Name="Line7">
-        <Top>11.65264cm</Top>
+        <Top>5.93764cm</Top>
         <Left>19.79823cm</Left>
         <Height>0cm</Height>
         <Width>-18.24145cm</Width>
@@ -1505,7 +1505,7 @@
               <TextRun>
                 <Value>=Fields!Fecha_Inicio.Value</Value>
                 <Style>
-                  <Format>d 'de' MMMM 'de' yyyy</Format>
+                  <Format>d 'de' MMMM</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1515,10 +1515,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Fecha_Inicio</rd:DefaultName>
-        <Top>7.16423cm</Top>
+        <Top>1.44923cm</Top>
         <Left>4.83548cm</Left>
         <Height>0.6cm</Height>
-        <Width>6.25708cm</Width>
+        <Width>2.80186cm</Width>
         <ZIndex>48</ZIndex>
         <Style>
           <Border>
@@ -1545,7 +1545,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>7.16423cm</Top>
+        <Top>1.44923cm</Top>
         <Left>3.69367cm</Left>
         <Height>0.6cm</Height>
         <Width>1.14181cm</Width>
@@ -1571,12 +1571,14 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>7.16423cm</Top>
-        <Left>11.41598cm</Left>
+        <Top>1.44923cm</Top>
+        <Left>7.60598cm</Left>
         <Height>0.6cm</Height>
         <Width>1.69062cm</Width>
         <ZIndex>50</ZIndex>
@@ -1609,8 +1611,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Fecha_Final</rd:DefaultName>
-        <Top>7.16423cm</Top>
-        <Left>13.14188cm</Left>
+        <Top>1.44923cm</Top>
+        <Left>9.33188cm</Left>
         <Height>0.6cm</Height>
         <Width>6.91321cm</Width>
         <ZIndex>51</ZIndex>
@@ -1641,7 +1643,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Dia_Hora_Asueto</rd:DefaultName>
-        <Top>13.49564cm</Top>
+        <Top>7.78064cm</Top>
         <Left>8.50971cm</Left>
         <Height>0.6cm</Height>
         <Width>3.48915cm</Width>
@@ -1670,13 +1672,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Asueto_400</rd:DefaultName>
-        <Top>13.49564cm</Top>
-        <Left>12.16834cm</Left>
+        <Top>7.78064cm</Top>
+        <Left>12.80334cm</Left>
         <Height>0.6cm</Height>
         <Width>4.31587cm</Width>
         <ZIndex>53</ZIndex>
@@ -1708,7 +1710,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox71</rd:DefaultName>
-        <Top>17.178cm</Top>
+        <Top>11.463cm</Top>
         <Left>14.04304cm</Left>
         <Height>0.6cm</Height>
         <Width>3.37003cm</Width>
@@ -1740,7 +1742,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox72</rd:DefaultName>
-        <Top>17.778cm</Top>
+        <Top>12.063cm</Top>
         <Left>13.0695cm</Left>
         <Height>0.6cm</Height>
         <Width>4.34358cm</Width>
@@ -1774,7 +1776,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox73</rd:DefaultName>
-        <Top>18.378cm</Top>
+        <Top>12.663cm</Top>
         <Left>13.0695cm</Left>
         <Height>0.6cm</Height>
         <Width>4.34358cm</Width>
@@ -1808,7 +1810,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hora_Ordinaria_1001</rd:DefaultName>
-        <Top>17.178cm</Top>
+        <Top>11.463cm</Top>
         <Left>17.41307cm</Left>
         <Height>0.6cm</Height>
         <Width>2.38516cm</Width>
@@ -1844,7 +1846,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hora_Ordinaria_1001</rd:DefaultName>
-        <Top>17.778cm</Top>
+        <Top>12.063cm</Top>
         <Left>17.41307cm</Left>
         <Height>0.6cm</Height>
         <Width>2.38516cm</Width>
@@ -1880,7 +1882,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hora_Ordinaria_1001</rd:DefaultName>
-        <Top>18.378cm</Top>
+        <Top>12.663cm</Top>
         <Left>17.41307cm</Left>
         <Height>0.6cm</Height>
         <Width>2.38516cm</Width>
@@ -1914,7 +1916,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Dias_vacaciones</rd:DefaultName>
-        <Top>14.09564cm</Top>
+        <Top>8.38064cm</Top>
         <Left>8.50971cm</Left>
         <Height>0.6cm</Height>
         <Width>3.48915cm</Width>
@@ -1943,13 +1945,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Vacaciones_30</rd:DefaultName>
-        <Top>14.09564cm</Top>
-        <Left>12.16834cm</Left>
+        <Top>8.38064cm</Top>
+        <Left>12.80334cm</Left>
         <Height>0.6cm</Height>
         <Width>4.31587cm</Width>
         <ZIndex>61</ZIndex>
@@ -1979,7 +1981,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox154</rd:DefaultName>
-        <Top>14.66036cm</Top>
+        <Top>8.94536cm</Top>
         <Left>1.69331cm</Left>
         <Height>0.6cm</Height>
         <Width>6.67529cm</Width>
@@ -2008,13 +2010,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Viaticos</rd:DefaultName>
-        <Top>14.73092cm</Top>
-        <Left>12.16834cm</Left>
+        <Top>9.01592cm</Top>
+        <Left>12.80334cm</Left>
         <Height>0.6cm</Height>
         <Width>4.31587cm</Width>
         <ZIndex>63</ZIndex>
@@ -2043,13 +2045,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Viaticos</rd:DefaultName>
-        <Top>14.73092cm</Top>
-        <Left>16.6606cm</Left>
+        <Top>9.01592cm</Top>
+        <Left>17.41307cm</Left>
         <Height>0.6cm</Height>
         <Width>3.14794cm</Width>
         <ZIndex>64</ZIndex>
@@ -2064,6 +2066,2041 @@
           <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Periodo: </Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>15.11564cm</Top>
+        <Left>1.28196cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>65</ZIndex>
+        <Style>
+          <Border>
+            <Color>White</Color>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Empleado:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>15.71564cm</Top>
+        <Left>1.28195cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>66</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox39">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Cargo:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>16.31563cm</Top>
+        <Left>1.28195cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>67</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox40">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Salario Quincenal:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>16.91564cm</Top>
+        <Left>1.28195cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.10854cm</Width>
+        <ZIndex>68</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox41">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Días Remunerados:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>17.51204cm</Top>
+        <Left>1.28196cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.53186cm</Width>
+        <ZIndex>69</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox42">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Días Perdidos:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>18.11205cm</Top>
+        <Left>1.28196cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.49999cm</Width>
+        <ZIndex>70</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox43">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Días Vacaciones:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>18.71203cm</Top>
+        <Left>1.28196cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.85908cm</Width>
+        <ZIndex>71</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="LogoLosNacimientos3">
+        <Source>Embedded</Source>
+        <Value>LogoLosNacimientos</Value>
+        <Sizing>Fit</Sizing>
+        <Top>13.71059cm</Top>
+        <Left>1.41742cm</Left>
+        <Height>1.21938cm</Height>
+        <Width>1.5cm</Width>
+        <ZIndex>72</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox52">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Concepto</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox50</rd:DefaultName>
+        <Top>19.64389cm</Top>
+        <Left>1.33453cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.7811cm</Width>
+        <ZIndex>73</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox69">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Hora Ordinarias 100%</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox57</rd:DefaultName>
+        <Top>20.21178cm</Top>
+        <Left>1.44036cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.67528cm</Width>
+        <ZIndex>74</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox70">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Hora Extra 200%</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox57</rd:DefaultName>
+        <Top>20.81177cm</Top>
+        <Left>1.44036cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.67528cm</Width>
+        <ZIndex>75</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox75">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Seguro Social</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox57</rd:DefaultName>
+        <Top>23.21178cm</Top>
+        <Left>1.44805cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.67528cm</Width>
+        <ZIndex>76</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox76">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>AFP-CONFIA</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox57</rd:DefaultName>
+        <Top>23.81177cm</Top>
+        <Left>1.44804cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.67528cm</Width>
+        <ZIndex>77</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox78">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Prestamo/Adelanto</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox57</rd:DefaultName>
+        <Top>24.41177cm</Top>
+        <Left>1.44036cm</Left>
+        <Height>0.55688cm</Height>
+        <Width>6.67528cm</Width>
+        <ZIndex>78</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox79">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Hora dia asueto trabajado 400%</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox57</rd:DefaultName>
+        <Top>21.41177cm</Top>
+        <Left>1.44036cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.67528cm</Width>
+        <ZIndex>79</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox81">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Vacaciones Salario Quince. +30%</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox57</rd:DefaultName>
+        <Top>22.01178cm</Top>
+        <Left>1.44036cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.67528cm</Width>
+        <ZIndex>80</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox44">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LOS NACIMIENTOS , S.A. DE C.V.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>13.71059cm</Top>
+        <Left>3.00174cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.15667cm</Width>
+        <ZIndex>81</ZIndex>
+        <Style>
+          <Border>
+            <Color>White</Color>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox45">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>BOLETA DE PAGO QUINCENAL</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>13.71059cm</Top>
+        <Left>12.99971cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.80242cm</Width>
+        <ZIndex>82</ZIndex>
+        <Style>
+          <Border>
+            <Color>White</Color>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox82">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ingresos</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox69</rd:DefaultName>
+        <Top>19.64389cm</Top>
+        <Left>11.74591cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.48534cm</Width>
+        <ZIndex>83</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox83">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Deducciones</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox70</rd:DefaultName>
+        <Top>19.60861cm</Top>
+        <Left>16.23125cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.30628cm</Width>
+        <ZIndex>84</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox87">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Cantidad</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox69</rd:DefaultName>
+        <Top>19.64389cm</Top>
+        <Left>8.1509cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.595cm</Width>
+        <ZIndex>85</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox46">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Salario Hora:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>16.91564cm</Top>
+        <Left>12.85875cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.9078cm</Width>
+        <ZIndex>86</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox47">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Días Incapacitados:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>17.51204cm</Top>
+        <Left>12.85875cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.24965cm</Width>
+        <ZIndex>87</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox48">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Días Asueto Trabajados:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>18.11205cm</Top>
+        <Left>12.85875cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.99264cm</Width>
+        <ZIndex>88</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox49">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Horas Laboradas:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>18.71203cm</Top>
+        <Left>12.85875cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.94307cm</Width>
+        <ZIndex>89</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox50">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Salario Dia:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>16.91205cm</Top>
+        <Left>7.9594cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.94437cm</Width>
+        <ZIndex>90</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Trabajador3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Trabajador.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Trabajador</rd:DefaultName>
+        <Top>15.71564cm</Top>
+        <Left>4.88438cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>91</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Nombre3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Nombre.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Nombre</rd:DefaultName>
+        <Top>16.31563cm</Top>
+        <Left>4.88438cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>92</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Salario_Quincenal3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Salario_Quincenal.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Salario_Quincenal</rd:DefaultName>
+        <Top>16.91205cm</Top>
+        <Left>4.88438cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>93</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Dias_Remunerados3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Dias_Remunerados.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Dias_Remunerados</rd:DefaultName>
+        <Top>17.51204cm</Top>
+        <Left>4.88438cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>94</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Salario_Diario3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Salario_Diario.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Salario_Diario</rd:DefaultName>
+        <Top>16.91205cm</Top>
+        <Left>9.97433cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>95</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Salario_Hora3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Salario_Hora.Value</Value>
+                <Style>
+                  <Format>'$'#,0.0000;('$'#,0.0000)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Salario_Hora</rd:DefaultName>
+        <Top>16.91205cm</Top>
+        <Left>16.83322cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>96</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Dias_Perdidos3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Dias_perdidos.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Dias_Perdidos1</rd:DefaultName>
+        <Top>18.11205cm</Top>
+        <Left>4.88438cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>97</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Dias_Vacaciones3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Dias_vacaciones.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Dias_Vacaciones1</rd:DefaultName>
+        <Top>18.71203cm</Top>
+        <Left>4.88438cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>98</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Dias_Incapacitado3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Dias_incapacitado.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Dias_Incapacitado</rd:DefaultName>
+        <Top>17.51204cm</Top>
+        <Left>16.83322cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>99</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Dias_Asueto_Trabajados3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Dias_Asueto_Trabajados.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Dias_Asueto_Trabajados</rd:DefaultName>
+        <Top>18.11205cm</Top>
+        <Left>16.83321cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>100</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Horas_Laboradas5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Horas_Laboradas.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Horas_Laboradas</rd:DefaultName>
+        <Top>18.71203cm</Top>
+        <Left>16.83322cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>101</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Horas_Laboradas6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Horas_Laboradas.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Horas_Laboradas</rd:DefaultName>
+        <Top>20.21178cm</Top>
+        <Left>8.25674cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.48917cm</Width>
+        <ZIndex>102</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Hora_Ordinaria_102">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Hora_Ordinaria_100.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Hora_Ordinaria_100</rd:DefaultName>
+        <Top>20.21178cm</Top>
+        <Left>12.55038cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.31587cm</Width>
+        <ZIndex>103</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Horas_extra3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Horas_extra.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Horas_extra</rd:DefaultName>
+        <Top>20.81177cm</Top>
+        <Left>8.25674cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.48917cm</Width>
+        <ZIndex>104</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Horas_Extras_202">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Horas_Extras_200.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Horas_Extras_200</rd:DefaultName>
+        <Top>20.81177cm</Top>
+        <Left>12.55038cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.31587cm</Width>
+        <ZIndex>105</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Seguro_Social3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Seguro_Social.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Seguro_Social</rd:DefaultName>
+        <Top>23.28233cm</Top>
+        <Left>17.16285cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.1452cm</Width>
+        <ZIndex>106</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="AFP_CONFIA3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!AFP_CONFIA.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>AFP_CONFIA</rd:DefaultName>
+        <Top>23.88234cm</Top>
+        <Left>17.16285cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.13746cm</Width>
+        <ZIndex>107</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Anticipos3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Anticipos.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Anticipos</rd:DefaultName>
+        <Top>24.49415cm</Top>
+        <Left>17.16285cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.13746cm</Width>
+        <ZIndex>108</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Line Name="Line5">
+        <Top>20.24389cm</Top>
+        <Left>1.28196cm</Left>
+        <Height>0cm</Height>
+        <Width>18.25557cm</Width>
+        <ZIndex>109</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line8">
+        <Top>19.60405cm</Top>
+        <Left>19.54527cm</Left>
+        <Height>0cm</Height>
+        <Width>-18.24145cm</Width>
+        <ZIndex>110</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Fecha_Inicio3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Fecha_Inicio.Value</Value>
+                <Style>
+                  <Format>d 'de' MMMM</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Fecha_Inicio</rd:DefaultName>
+        <Top>15.11564cm</Top>
+        <Left>4.58252cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.80186cm</Width>
+        <ZIndex>111</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox53">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>De</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox16</rd:DefaultName>
+        <Top>15.11564cm</Top>
+        <Left>3.44071cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.14181cm</Width>
+        <ZIndex>112</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox54">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Hasta</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox24</rd:DefaultName>
+        <Top>15.11564cm</Top>
+        <Left>7.35302cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.69062cm</Width>
+        <ZIndex>113</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Fecha_Final3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Fecha_Final.Value</Value>
+                <Style>
+                  <Format>d 'de' MMMM 'de' yyyy</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Fecha_Final</rd:DefaultName>
+        <Top>15.11564cm</Top>
+        <Left>9.07892cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.91321cm</Width>
+        <ZIndex>114</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Dia_Hora_Asueto3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Dia_Hora_Asueto.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Dia_Hora_Asueto</rd:DefaultName>
+        <Top>21.44705cm</Top>
+        <Left>8.25675cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.48915cm</Width>
+        <ZIndex>115</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Asueto_402">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Asueto_400.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Asueto_400</rd:DefaultName>
+        <Top>21.44705cm</Top>
+        <Left>12.55038cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.31587cm</Width>
+        <ZIndex>116</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox88">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total Ingresos:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox71</rd:DefaultName>
+        <Top>25.12941cm</Top>
+        <Left>13.79008cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.37003cm</Width>
+        <ZIndex>117</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox89">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total Deducciones:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox72</rd:DefaultName>
+        <Top>25.72941cm</Top>
+        <Left>12.81654cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.34358cm</Width>
+        <ZIndex>118</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox90">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LIQUIDO A PAGAR:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox73</rd:DefaultName>
+        <Top>26.32941cm</Top>
+        <Left>12.81654cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.34358cm</Width>
+        <ZIndex>119</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Hora_Ordinaria_1010">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Hora_Ordinaria_100.Value + Fields!Horas_Extras_200.Value + Fields!Asueto_400.Value + Fields!Vacaciones_30.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Hora_Ordinaria_1001</rd:DefaultName>
+        <Top>25.12941cm</Top>
+        <Left>17.16011cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.38516cm</Width>
+        <ZIndex>120</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Hora_Ordinaria_1011">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Seguro_Social.Value + Fields!AFP_CONFIA.Value + Fields!Anticipos.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Hora_Ordinaria_1001</rd:DefaultName>
+        <Top>25.72941cm</Top>
+        <Left>17.16011cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.38516cm</Width>
+        <ZIndex>121</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Hora_Ordinaria_1012">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=(Fields!Hora_Ordinaria_100.Value + Fields!Horas_Extras_200.Value + Fields!Asueto_400.Value + Fields!Vacaciones_30.Value + Fields!Viaticos.Value) - (Fields!Seguro_Social.Value + Fields!AFP_CONFIA.Value + Fields!Anticipos.Value + Fields!Viaticos.Value)</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Hora_Ordinaria_1001</rd:DefaultName>
+        <Top>26.32941cm</Top>
+        <Left>17.16011cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.38516cm</Width>
+        <ZIndex>122</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Dias_vacaciones3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Dias_vacaciones.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Dias_vacaciones</rd:DefaultName>
+        <Top>22.04705cm</Top>
+        <Left>8.25675cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.48915cm</Width>
+        <ZIndex>123</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Vacaciones_32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Vacaciones_30.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Vacaciones_30</rd:DefaultName>
+        <Top>22.04705cm</Top>
+        <Left>12.55038cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.31587cm</Width>
+        <ZIndex>124</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox158">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Viaticos</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox154</rd:DefaultName>
+        <Top>22.61177cm</Top>
+        <Left>1.44035cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.67529cm</Width>
+        <ZIndex>125</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Viaticos5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Viaticos.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Viaticos</rd:DefaultName>
+        <Top>22.68233cm</Top>
+        <Left>12.55038cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.31587cm</Width>
+        <ZIndex>126</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Viaticos6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Viaticos.Value</Value>
+                <Style>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Viaticos</rd:DefaultName>
+        <Top>22.68233cm</Top>
+        <Left>17.16011cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.14794cm</Width>
+        <ZIndex>127</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-SV</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Line Name="Line6">
+        <Top>13.46412cm</Top>
+        <Left>0.15557cm</Left>
+        <Height>0cm</Height>
+        <Width>21.43443cm</Width>
+        <ZIndex>128</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>11in</Height>
     <Style />

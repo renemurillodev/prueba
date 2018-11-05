@@ -14,6 +14,7 @@ namespace SistemaARD.Vistas
     public partial class GenerarContratos : Form
     {
         public int Id;
+        public string nombreDepto;
 
         public GenerarContratos()
         {
@@ -25,9 +26,27 @@ namespace SistemaARD.Vistas
             object ObjMiss = System.Reflection.Missing.Value;
             Word.Application ObjWord = new Word.Application();
 
-            string ruta = Application.StartupPath + @"\contrato-motorista.docx";
-            //string ruta = Application.StartupPath + @"\contrato-vendedor.docx";
-            //string ruta = Application.StartupPath + @"\contrato-plantaproduccion.docx";
+            string ruta = "";
+            if (nombreDepto == "Mantenimiento")
+            {
+
+            }
+            else if (nombreDepto == "Transporte")
+            {
+                ruta = @"C:\Contratos\contrato-motorista.docx";
+            }
+            else if (nombreDepto == "Ventas")
+            {
+                ruta = @"C:\Contratos\contrato-vendedor.docx";
+            }
+            else if (nombreDepto == "Producción")
+            {
+                ruta = @"C:\Contratos\contrato-plantaproduccion.docx";
+            }
+            else if (nombreDepto == "Administración")
+            {
+
+            }
             object parametro = ruta;
             object nombre = "nombre";
             object nombre1 = "nombre1";
@@ -119,6 +138,12 @@ namespace SistemaARD.Vistas
 
             using (DBEntities db = new DBEntities())
             {
+                nombreDepto = (from emp in db.Empleados
+                               join c in db.Cargos on emp.Cargo_Id equals c.Id
+                               join d in db.Departamentos on c.Departamento_Id equals d.Id
+                               where emp.Id == Id
+                               select d.Nombre).FirstOrDefault();
+
                 var empleado = db.Empleados.Find(Id);
                 txtNombreCompeto.Text = empleado.NombreCompleto;
                 txtSexo.Text = empleado.Generos.Nombre;

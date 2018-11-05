@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaIndemnizaciones));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTotalPagoLiquido = new System.Windows.Forms.Label();
@@ -56,7 +57,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 178);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -67,7 +77,7 @@
             // 
             this.lblTotalPagoLiquido.AutoSize = true;
             this.lblTotalPagoLiquido.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
-            this.lblTotalPagoLiquido.Location = new System.Drawing.Point(445, 465);
+            this.lblTotalPagoLiquido.Location = new System.Drawing.Point(460, 465);
             this.lblTotalPagoLiquido.Name = "lblTotalPagoLiquido";
             this.lblTotalPagoLiquido.Size = new System.Drawing.Size(84, 16);
             this.lblTotalPagoLiquido.TabIndex = 1;
@@ -161,7 +171,7 @@
             // 
             this.lblRetenciones.AutoSize = true;
             this.lblRetenciones.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
-            this.lblRetenciones.Location = new System.Drawing.Point(220, 465);
+            this.lblRetenciones.Location = new System.Drawing.Point(226, 465);
             this.lblRetenciones.Name = "lblRetenciones";
             this.lblRetenciones.Size = new System.Drawing.Size(108, 16);
             this.lblRetenciones.TabIndex = 9;
@@ -182,23 +192,23 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panel1.Location = new System.Drawing.Point(16, 487);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 1);
+            this.panel1.Size = new System.Drawing.Size(180, 1);
             this.panel1.TabIndex = 11;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel2.Location = new System.Drawing.Point(217, 487);
+            this.panel2.Location = new System.Drawing.Point(228, 487);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(170, 1);
+            this.panel2.Size = new System.Drawing.Size(210, 1);
             this.panel2.TabIndex = 12;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel3.Location = new System.Drawing.Point(442, 487);
+            this.panel3.Location = new System.Drawing.Point(461, 487);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(175, 1);
+            this.panel3.Size = new System.Drawing.Size(220, 1);
             this.panel3.TabIndex = 13;
             // 
             // iconCerrar
