@@ -86,29 +86,49 @@ namespace SistemaARD
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("IniciarSesion", usernameParameter, passwordParameter);
         }
     
-        public virtual int InsertarAguinaldoAdministracion()
+        public virtual int InsertarAguinaldoAdministracion(Nullable<System.DateTime> fecha)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoAdministracion");
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoAdministracion", fechaParameter);
         }
     
-        public virtual int InsertarAguinaldoMantenimiento()
+        public virtual int InsertarAguinaldoMantenimiento(Nullable<System.DateTime> fecha)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoMantenimiento");
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoMantenimiento", fechaParameter);
         }
     
-        public virtual int InsertarAguinaldoProduccion()
+        public virtual int InsertarAguinaldoProduccion(Nullable<System.DateTime> fecha)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoProduccion");
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoProduccion", fechaParameter);
         }
     
-        public virtual int InsertarAguinaldoTransporte()
+        public virtual int InsertarAguinaldoTransporte(Nullable<System.DateTime> fecha)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoTransporte");
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoTransporte", fechaParameter);
         }
     
-        public virtual int InsertarAguinaldoVentas()
+        public virtual int InsertarAguinaldoVentas(Nullable<System.DateTime> fecha)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoVentas");
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarAguinaldoVentas", fechaParameter);
         }
     
         public virtual ObjectResult<Nullable<int>> InsertarIndemnizacion(Nullable<System.DateTime> desde, Nullable<System.DateTime> hasta)
@@ -366,30 +386,38 @@ namespace SistemaARD
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("VerificarPlanillaJefes", fechaParameter, idEmpleadoParameter);
         }
     
-        public virtual int VerificarPlanillaProduccion(Nullable<System.DateTime> fecha, Nullable<int> idEmpleado)
+        public virtual int VerificarPlanillaProduccion(Nullable<System.DateTime> fecha_Inicio, Nullable<System.DateTime> fecha_Final, Nullable<int> idEmpleado)
         {
-            var fechaParameter = fecha.HasValue ?
-                new ObjectParameter("Fecha", fecha) :
-                new ObjectParameter("Fecha", typeof(System.DateTime));
+            var fecha_InicioParameter = fecha_Inicio.HasValue ?
+                new ObjectParameter("Fecha_Inicio", fecha_Inicio) :
+                new ObjectParameter("Fecha_Inicio", typeof(System.DateTime));
+    
+            var fecha_FinalParameter = fecha_Final.HasValue ?
+                new ObjectParameter("Fecha_Final", fecha_Final) :
+                new ObjectParameter("Fecha_Final", typeof(System.DateTime));
     
             var idEmpleadoParameter = idEmpleado.HasValue ?
                 new ObjectParameter("IdEmpleado", idEmpleado) :
                 new ObjectParameter("IdEmpleado", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("VerificarPlanillaProduccion", fechaParameter, idEmpleadoParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("VerificarPlanillaProduccion", fecha_InicioParameter, fecha_FinalParameter, idEmpleadoParameter);
         }
     
-        public virtual int VerificarPlanillaVentas(Nullable<System.DateTime> fecha, Nullable<int> idEmpleado)
+        public virtual int VerificarPlanillaVentas(Nullable<System.DateTime> fecha_Inicio, Nullable<System.DateTime> fecha_Final, Nullable<int> idEmpleado)
         {
-            var fechaParameter = fecha.HasValue ?
-                new ObjectParameter("Fecha", fecha) :
-                new ObjectParameter("Fecha", typeof(System.DateTime));
+            var fecha_InicioParameter = fecha_Inicio.HasValue ?
+                new ObjectParameter("Fecha_Inicio", fecha_Inicio) :
+                new ObjectParameter("Fecha_Inicio", typeof(System.DateTime));
+    
+            var fecha_FinalParameter = fecha_Final.HasValue ?
+                new ObjectParameter("Fecha_Final", fecha_Final) :
+                new ObjectParameter("Fecha_Final", typeof(System.DateTime));
     
             var idEmpleadoParameter = idEmpleado.HasValue ?
                 new ObjectParameter("IdEmpleado", idEmpleado) :
                 new ObjectParameter("IdEmpleado", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("VerificarPlanillaVentas", fechaParameter, idEmpleadoParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("VerificarPlanillaVentas", fecha_InicioParameter, fecha_FinalParameter, idEmpleadoParameter);
         }
     }
 }

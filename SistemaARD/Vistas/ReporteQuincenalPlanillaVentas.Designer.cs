@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.losnacimientosDataSet = new SistemaARD.losnacimientosDataSet();
             this.ReporteQuincenalVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.losnacimientosDataSet = new SistemaARD.losnacimientosDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ReporteQuincenalVentasTableAdapter = new SistemaARD.losnacimientosDataSetTableAdapters.ReporteQuincenalVentasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.losnacimientosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReporteQuincenalVentasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.losnacimientosDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ReporteQuincenalVentasBindingSource
+            // 
+            this.ReporteQuincenalVentasBindingSource.DataMember = "ReporteQuincenalVentas";
+            this.ReporteQuincenalVentasBindingSource.DataSource = this.losnacimientosDataSet;
+            // 
+            // losnacimientosDataSet
+            // 
+            this.losnacimientosDataSet.DataSetName = "losnacimientosDataSet";
+            this.losnacimientosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -44,22 +54,12 @@
             reportDataSource1.Name = "ReporteQuincenalVentas";
             reportDataSource1.Value = this.ReporteQuincenalVentasBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaARD.ReporteQuincenalPlanillaVentas.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaARD.Reportes.ReporteQuincenalPlanillaVentas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // losnacimientosDataSet
-            // 
-            this.losnacimientosDataSet.DataSetName = "losnacimientosDataSet";
-            this.losnacimientosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ReporteQuincenalVentasBindingSource
-            // 
-            this.ReporteQuincenalVentasBindingSource.DataMember = "ReporteQuincenalVentas";
-            this.ReporteQuincenalVentasBindingSource.DataSource = this.losnacimientosDataSet;
             // 
             // ReporteQuincenalVentasTableAdapter
             // 
@@ -74,8 +74,8 @@
             this.Name = "ReporteQuincenalPlanillaVentas";
             this.Text = "ReporteQuincenalPlanillaVentas";
             this.Load += new System.EventHandler(this.ReporteQuincenalPlanillaVentas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.losnacimientosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReporteQuincenalVentasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.losnacimientosDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

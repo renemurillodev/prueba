@@ -12,9 +12,11 @@ using System.Runtime.InteropServices;
 
 namespace SistemaARD.Vistas
 {
+
     public partial class Login : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+       [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
       (
           int nLeftRect,     // x-coordinate of upper-left corner
@@ -59,6 +61,7 @@ namespace SistemaARD.Vistas
                 else
                 {
                     MainForm principal = new MainForm();
+
                     this.Hide();
                     principal.Show();
                 }
@@ -152,5 +155,11 @@ namespace SistemaARD.Vistas
                 throw;
             }
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

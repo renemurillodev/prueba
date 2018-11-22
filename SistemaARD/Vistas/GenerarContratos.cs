@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization; 
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,7 +64,10 @@ namespace SistemaARD.Vistas
             object cargo = "cargo";
             object salario = "salario";
             object periodo = "periodo";
-            
+            object dia = "dia"; 
+            object mes = "mes"; 
+            object anio = "anio"; 
+
             Word.Document ObjDoc = ObjWord.Documents.Open(parametro, ObjMiss);
 
             Word.Range nom = ObjDoc.Bookmarks.get_Item(ref nombre).Range;
@@ -81,6 +85,11 @@ namespace SistemaARD.Vistas
             Word.Range carg = ObjDoc.Bookmarks.get_Item(ref cargo).Range;
             Word.Range sala = ObjDoc.Bookmarks.get_Item(ref salario).Range;
             Word.Range period = ObjDoc.Bookmarks.get_Item(ref periodo).Range;
+            Word.Range day = ObjDoc.Bookmarks.get_Item(ref dia).Range; 
+            Word.Range month = ObjDoc.Bookmarks.get_Item(ref mes).Range; 
+            Word.Range year = ObjDoc.Bookmarks.get_Item(ref anio).Range; 
+
+
 
             nom.Text = txtNombreCompeto.Text;
             nom1.Text = txtNombreCompeto.Text;
@@ -97,6 +106,10 @@ namespace SistemaARD.Vistas
             carg.Text = txtCargo.Text;
             sala.Text = txtSalario.Text;
             period.Text = txtPeriodo.Text;
+            day.Text = Convert.ToString(DateTime.Now.Day); 
+            month.Text = nombreMes(DateTime.Now.Month); 
+            year.Text = Convert.ToString(DateTime.Now.Year); 
+
 
             object rango1 = nom;
             object rango15 = nom1;
@@ -113,6 +126,9 @@ namespace SistemaARD.Vistas
             object rango12 = carg;
             object rango13 = sala;
             object rango14 = period;
+            object rango16 = day; 
+            object rango17 = month; 
+            object rango18 = year; 
 
             ObjDoc.Bookmarks.Add("nombre", ref rango1);
             ObjDoc.Bookmarks.Add("nombre1", ref rango15);
@@ -129,8 +145,29 @@ namespace SistemaARD.Vistas
             ObjDoc.Bookmarks.Add("cargo", ref rango12);
             ObjDoc.Bookmarks.Add("salario", ref rango13);
             ObjDoc.Bookmarks.Add("periodo", ref rango14);
+            ObjDoc.Bookmarks.Add("dia", ref rango16); 
+            ObjDoc.Bookmarks.Add("mes", ref rango17); 
+            ObjDoc.Bookmarks.Add("anio", ref rango18); 
+
             ObjWord.Visible = true;
         }
+
+
+        private string nombreMes(int numeroMes)
+        {
+            try
+            {
+                DateTimeFormatInfo formatoFecha = CultureInfo.CurrentCulture.DateTimeFormat;
+                string nombreMes = formatoFecha.GetMonthName(numeroMes);
+                return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombreMes);
+            }
+            catch
+            {
+                return "Desconocido";
+            }
+        }
+
+
 
         private void GenerarContratos_Load(object sender, EventArgs e)
         {

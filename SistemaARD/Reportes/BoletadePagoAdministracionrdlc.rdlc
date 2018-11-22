@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
-    <Height>2in</Height>
+    <Height>27.9cm</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>21.59cm</Width>
   <Page>
-    <PageHeight>27.94cm</PageHeight>
-    <PageWidth>21.59cm</PageWidth>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>
@@ -17,5 +17,5 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>64cd0196-3fa5-4545-9b76-de9b6b25aa28</rd:ReportID>
+  <rd:ReportID>2fb1b811-32e4-4345-9c92-7cc500d05d92</rd:ReportID>
 </Report>

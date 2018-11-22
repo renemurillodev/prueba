@@ -33,7 +33,7 @@
             this.Fullcontainer = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDiaFecha = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.btnPlanilla = new System.Windows.Forms.Button();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.Fullcontainer.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +100,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.lblUsuario);
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Controls.Add(this.lblDiaFecha);
@@ -110,16 +111,16 @@
             this.panel6.Size = new System.Drawing.Size(550, 60);
             this.panel6.TabIndex = 4;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(68)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(62, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 14);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Estado: Activo";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(68)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(62, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 14);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Usuarios administrativos";
             // 
             // lblUsuario
             // 
@@ -128,12 +129,14 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(68)))), ((int)(((byte)(255)))));
             this.lblUsuario.Location = new System.Drawing.Point(62, 14);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(47, 14);
+            this.lblUsuario.Size = new System.Drawing.Size(66, 14);
             this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "Registro de";
+            this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(6, 7);
             this.pictureBox1.Name = "pictureBox1";
@@ -141,6 +144,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblDiaFecha
             // 
@@ -148,7 +152,7 @@
             this.lblDiaFecha.AutoSize = true;
             this.lblDiaFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(68)))), ((int)(((byte)(255)))));
-            this.lblDiaFecha.Location = new System.Drawing.Point(312, 12);
+            this.lblDiaFecha.Location = new System.Drawing.Point(287, 12);
             this.lblDiaFecha.Name = "lblDiaFecha";
             this.lblDiaFecha.Size = new System.Drawing.Size(46, 16);
             this.lblDiaFecha.TabIndex = 7;
@@ -160,7 +164,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(68)))), ((int)(((byte)(255)))));
-            this.lblHora.Location = new System.Drawing.Point(459, 35);
+            this.lblHora.Location = new System.Drawing.Point(467, 35);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(79, 20);
             this.lblHora.TabIndex = 6;
@@ -187,7 +191,7 @@
             this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("iconMinimizar.Image")));
-            this.iconMinimizar.Location = new System.Drawing.Point(482, 12);
+            this.iconMinimizar.Location = new System.Drawing.Point(451, 12);
             this.iconMinimizar.Name = "iconMinimizar";
             this.iconMinimizar.Size = new System.Drawing.Size(25, 25);
             this.iconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,7 +210,6 @@
             this.iconRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconRestaurar.TabIndex = 4;
             this.iconRestaurar.TabStop = false;
-            this.iconRestaurar.Visible = false;
             this.iconRestaurar.Click += new System.EventHandler(this.iconRestaurar_Click);
             // 
             // iconMaximizar
@@ -251,6 +254,7 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.panel8);
             this.MenuVertical.Controls.Add(this.btnDepartamentos);
             this.MenuVertical.Controls.Add(this.panel7);
@@ -461,6 +465,22 @@
             this.HoraFecha.Enabled = true;
             this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(2, 512);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(247, 45);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "SEPP";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,7 +513,6 @@
         private System.Windows.Forms.Panel Fullcontainer;
         private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDiaFecha;
@@ -521,5 +540,7 @@
         private System.Windows.Forms.Button btnCargos;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnDepartamentos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

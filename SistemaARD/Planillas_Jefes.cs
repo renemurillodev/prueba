@@ -15,10 +15,12 @@ namespace SistemaARD
     public partial class Planillas_Jefes
     {
         public int Id { get; set; }
-        public System.DateTime Fecha { get; set; }
         public int Empleado_Id { get; set; }
         public decimal Anticipos { get; set; }
         public decimal Salario_quincenal { get; set; }
+        public System.DateTime Fecha_Inicio { get; set; }
+        public System.DateTime Fecha_Final { get; set; }
+        public Nullable<int> Categoria_Id { get; set; }
     
         public virtual Empleados Empleados { get; set; }
     }

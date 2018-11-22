@@ -44,7 +44,7 @@
             reportDataSource1.Name = "DataSetBOletaVentas";
             reportDataSource1.Value = this.reporte_planillaventa1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaARD.BoletadePagoVentas.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaARD.Reportes.BoletadePagoVentas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;

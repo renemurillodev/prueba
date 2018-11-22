@@ -17,6 +17,8 @@ namespace SistemaARD
         private Empleados empleados = new Empleados();
         string idPlanillaVentas = "";
         string idPlanillaProduccion = "";
+        string idPlanillaTransporte = "";
+        
 
         public FPlanillas()
         {
@@ -35,6 +37,7 @@ namespace SistemaARD
                 {
                     var queryventas = (from pv in db.PlanillasVentas
                                        where pv.Categoria_Id == 1
+                                       || pv.Categoria_Id == 2
                                        join em in db.Empleados on pv.Empleado_Id equals em.Id
                                        join cp in db.CategoriasPlanillas on pv.Categoria_Id equals cp.Id
                                        select new
@@ -51,7 +54,7 @@ namespace SistemaARD
                                        }).ToList();
 
                     var querytransporte = (from pv in db.PlanillasVentas
-                                           where pv.Categoria_Id == 2
+                                           where pv.Categoria_Id == 3
                                            join em in db.Empleados on pv.Empleado_Id equals em.Id
                                            join cp in db.CategoriasPlanillas on pv.Categoria_Id equals cp.Id
                                            select new
@@ -101,7 +104,7 @@ namespace SistemaARD
                                                Categoria_Id = cp.Nombre
                                            }).ToList();
 
-                    var queryadmon = (from pv in db.PlanillasVentas
+                    var queryadmon = (from pv in db.Planillas_Jefes
                                       where pv.Categoria_Id == 5
                                       join em in db.Empleados on pv.Empleado_Id equals em.Id
                                       join cp in db.CategoriasPlanillas on pv.Categoria_Id equals cp.Id
@@ -110,17 +113,16 @@ namespace SistemaARD
                                           Id = pv.Id,
                                           Nombres = em.Nombres,
                                           Apellidos = em.Apellidos,
-                                          Dias_laborados = pv.Dias_laborados,
-                                          Horas_extra = pv.Horas_extra,
                                           Anticipos = pv.Anticipos,
                                           Fecha_Final = pv.Fecha_Final,
                                           Fecha_Inicio = pv.Fecha_Inicio,
+                                          Salario_quincenal = pv.Salario_quincenal,
                                           Categoria_Id = cp.Nombre
                                       }).ToList();
 
                     dgvVentas.DataSource = queryventas;
                     dgvTransporte.DataSource = querytransporte;
-                    dgvMantenimiento.DataSource = querymantenimiento;
+                    
                     dgvProduccion.DataSource = queryproduccion;
                     dgvAdministracion.DataSource = queryadmon;
                 }
@@ -149,7 +151,7 @@ namespace SistemaARD
             }
             catch (Exception)
             {
-                MessageBox.Show("Registro vacío");
+                MessageBox.Show("Registros vacío");
             }
         }
 
@@ -169,6 +171,88 @@ namespace SistemaARD
             formrepoquinceventa.FechaInicio = dtpfecha_inicio_reportemensual_ventas.Value.Date;
             formrepoquinceventa.FechaFinal = dtpfecha_final_reportemensual_ventas.Value.Date;
             formrepoquinceventa.ShowDialog();
+        }
+
+        private void btnGenerarReporteProduccion_Click(object sender, EventArgs e)
+        {
+            ReporteBoletadePagoProduccion frmreportes = new ReporteBoletadePagoProduccion();
+            if (dgvProduccion.CurrentRow.Index != -1)
+            {
+                frmreportes.idPlanillaVenta = Convert.ToInt32(dgvProduccion.CurrentRow.Cells["Id_Produccion"].Value);
+                frmreportes.ShowDialog();
+            }
+        }
+
+        private void btnGenerarReporteTransporte_Click(object sender, EventArgs e)
+        {
+            ReporteBoletadePagoTransporte frmreportes = new ReporteBoletadePagoTransporte();
+            if (dgvTransporte.CurrentRow.Index != -1)
+            {
+                frmreportes.idPlanillaVenta = Convert.ToInt32(dgvTransporte.CurrentRow.Cells["Id_Transporte"].Value);
+                frmreportes.ShowDialog();
+            }
+        }
+
+
+        private void btnGenerarReporteAdministracion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvProduccion_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvProduccion.CurrentRow.Index != -1)
+                {
+                    idPlanillaProduccion = Convert.ToString(dgvProduccion.CurrentRow.Cells["Id_Produccion"].Value);
+                    btnGenerarReporteProduccion.Visible = true;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Registros vacío");
+            }
+        }
+
+        private void btnReporteQuincenalProduccion_Click(object sender, EventArgs e)
+        {
+            ReporteQuincenalPlanillaProduccion formrepoquinceproduccion = new ReporteQuincenalPlanillaProduccion();
+            formrepoquinceproduccion.FechaInicio = dtpFecha_Inicio_Produccion.Value.Date;
+            formrepoquinceproduccion.FechaFinal = dtpFecha_Final_Produccion.Value.Date;
+            formrepoquinceproduccion.ShowDialog();
+        }
+
+        private void dgvTransporte_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvTransporte.CurrentRow.Index != -1)
+                {
+                    idPlanillaTransporte = Convert.ToString(dgvTransporte.CurrentRow.Cells["Id_Transporte"].Value);
+                    btnGenerarReporteTransporte.Visible = true;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Registros vacío");
+            }
+        }
+
+        private void btnReporteQuincenalTransporte_Click(object sender, EventArgs e)
+        {
+            ReporteQuincenalPlanillaTransporte formrepoquinceproduccion = new ReporteQuincenalPlanillaTransporte();
+            formrepoquinceproduccion.FechaInicio = dtpFecha_Inicio_Transporte.Value.Date;
+            formrepoquinceproduccion.FechaFinal = dtpFecha_Final_Transporte.Value.Date;
+            formrepoquinceproduccion.ShowDialog();
+        }
+
+        private void btnReporteQuincenalAdministracion_Click(object sender, EventArgs e)
+        {
+            ReporteQuincenalPlanillaAdministracion formrepoquinceproduccion = new ReporteQuincenalPlanillaAdministracion();
+            formrepoquinceproduccion.FechaInicio = dtpFecha_Inicio_Admon.Value.Date;
+            formrepoquinceproduccion.FechaFinal = dtpFecha_Final_Admon.Value.Date;
+            formrepoquinceproduccion.ShowDialog();
         }
     }
 }

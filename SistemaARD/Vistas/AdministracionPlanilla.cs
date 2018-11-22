@@ -21,7 +21,7 @@ namespace SistemaARD.Vistas
         PlanillasProduccion planillaProduccion = new PlanillasProduccion();
         Planillas_Jefes planillaAdmon = new Planillas_Jefes();
         Reportes reporte = new Reportes();
-        Clases.CalculoPlanilla calculoSalario = new Clases.CalculoPlanilla();
+
         public AdministracionPlanilla()
         {
             InitializeComponent();
@@ -478,6 +478,7 @@ namespace SistemaARD.Vistas
                     planillaProduccion.Horas_dias_incompletos = Convert.ToDouble(txtHorasDiasIncompletos.Text);
                     planillaProduccion.Horas_dias_asueto = Convert.ToDouble(txtDiasAsuetos.Text);
                     planillaProduccion.Dias_perdidos = Convert.ToInt32(txtDiasPerdidos.Text);
+                    planillaProduccion.Dias_laborados = (Convert.ToInt32(txtHorasLaboradas.Text) / 8);
                     planillaProduccion.Categoria_Id = 4;
 
 
@@ -550,7 +551,6 @@ namespace SistemaARD.Vistas
                     planillaAdmon.Empleado_Id = Convert.ToInt32(idEmpleado);
 
                     planillaAdmon.Anticipos = Convert.ToDecimal(txtAnticipos.Text);
-                    planillaAdmon.Fecha = dtpFechaInicio.Value;
                     decimal salarioMensual = 0;
                     int idEmp = int.Parse(idEmpleado);
                     using (DBEntities db = new DBEntities())
@@ -560,6 +560,9 @@ namespace SistemaARD.Vistas
                                           select em.Salario).FirstOrDefault();
                     }
                     planillaAdmon.Salario_quincenal = Math.Round(salarioMensual / 2, 2);
+                    planillaAdmon.Fecha_Inicio = dtpFechaInicio.Value;
+                    planillaAdmon.Fecha_Final = dtpFechaFinal.Value;
+                    planillaAdmon.Categoria_Id = 5;
 
                     //Registrar en tabla Reportes 
 

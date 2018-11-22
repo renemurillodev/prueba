@@ -141,10 +141,12 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
           <Property Name="Empleado_Id" Type="int" Nullable="false" />
           <Property Name="Anticipos" Type="decimal" Precision="4" Scale="2" Nullable="false" />
           <Property Name="Salario_quincenal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Fecha_Final" Type="date" Nullable="false" />
+          <Property Name="Categoria_Id" Type="int" />
         </EntityType>
         <EntityType Name="PlanillasProduccion">
           <Key>
@@ -152,11 +154,11 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Empleado_Id" Type="int" Nullable="false" />
-          <Property Name="Pago_hora" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Pago_hora" Type="decimal" Precision="6" Scale="5" Nullable="false" />
           <Property Name="Horas_laboradas" Type="int" Nullable="false" />
-          <Property Name="Anticipos" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Anticipos" Type="decimal" Precision="6" Scale="5" Nullable="false" />
           <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
-          <Property Name="Fecha_Final" Type="date" />
+          <Property Name="Fecha_Final" Type="date" Nullable="false" />
           <Property Name="Horas_extras" Type="float" />
           <Property Name="Dias_vacaciones" Type="int" />
           <Property Name="Dias_incapacitado" Type="int" />
@@ -480,11 +482,21 @@
           <Parameter Name="Username" Type="varchar" Mode="In" />
           <Parameter Name="Password" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="InsertarAguinaldoAdministracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="InsertarAguinaldoMantenimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="InsertarAguinaldoProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="InsertarAguinaldoTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="InsertarAguinaldoVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertarAguinaldoAdministracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+        </Function>
+        <Function Name="InsertarAguinaldoMantenimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+        </Function>
+        <Function Name="InsertarAguinaldoProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+        </Function>
+        <Function Name="InsertarAguinaldoTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+        </Function>
+        <Function Name="InsertarAguinaldoVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+        </Function>
         <Function Name="InsertarIndemnizacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Desde" Type="date" Mode="In" />
           <Parameter Name="Hasta" Type="date" Mode="In" />
@@ -555,11 +567,13 @@
           <Parameter Name="IdEmpleado" Type="int" Mode="In" />
         </Function>
         <Function Name="VerificarPlanillaProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="Fecha_Inicio" Type="date" Mode="In" />
+          <Parameter Name="Fecha_Final" Type="date" Mode="In" />
           <Parameter Name="IdEmpleado" Type="int" Mode="In" />
         </Function>
         <Function Name="VerificarPlanillaVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="Fecha_Inicio" Type="date" Mode="In" />
+          <Parameter Name="Fecha_Final" Type="date" Mode="In" />
           <Parameter Name="IdEmpleado" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="losnacimientosModelStoreContainer">
@@ -804,11 +818,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Empleado_Id" Type="Int32" Nullable="false" />
           <Property Name="Anticipos" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
           <Property Name="Salario_quincenal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <NavigationProperty Name="Empleados" Relationship="Self.FK_Planillas_Jefes_Empleados" FromRole="Planillas_Jefes" ToRole="Empleados" />
+          <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fecha_Final" Type="DateTime" Precision="0" Nullable="false" />
+          <Property Name="Categoria_Id" Type="Int32" />
         </EntityType>
         <EntityType Name="PlanillasProduccion">
           <Key>
@@ -816,12 +832,12 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Empleado_Id" Type="Int32" Nullable="false" />
-          <Property Name="Pago_hora" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Pago_hora" Type="Decimal" Precision="6" Scale="5" Nullable="false" />
           <Property Name="Horas_laboradas" Type="Int32" Nullable="false" />
-          <Property Name="Anticipos" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Anticipos" Type="Decimal" Precision="6" Scale="5" Nullable="false" />
           <NavigationProperty Name="Empleados" Relationship="Self.FK_PlanillasProduccion_Empleados" FromRole="PlanillasProduccion" ToRole="Empleados" />
           <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Fecha_Final" Type="DateTime" Precision="0" />
+          <Property Name="Fecha_Final" Type="DateTime" Precision="0" Nullable="false" />
           <Property Name="Horas_extras" Type="Double" />
           <Property Name="Dias_vacaciones" Type="Int32" />
           <Property Name="Dias_incapacitado" Type="Int32" />
@@ -1203,11 +1219,21 @@
             <Parameter Name="Username" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="InsertarAguinaldoAdministracion" />
-          <FunctionImport Name="InsertarAguinaldoMantenimiento" />
-          <FunctionImport Name="InsertarAguinaldoProduccion" />
-          <FunctionImport Name="InsertarAguinaldoTransporte" />
-          <FunctionImport Name="InsertarAguinaldoVentas" />
+          <FunctionImport Name="InsertarAguinaldoAdministracion" >
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarAguinaldoMantenimiento" >
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarAguinaldoProduccion" >
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarAguinaldoTransporte" >
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarAguinaldoVentas" >
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
           <FunctionImport Name="InsertarIndemnizacion" ReturnType="Collection(Int32)">
             <Parameter Name="Desde" Mode="In" Type="DateTime" />
             <Parameter Name="Hasta" Mode="In" Type="DateTime" />
@@ -1278,11 +1304,13 @@
             <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="VerificarPlanillaProduccion">
-            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_Final" Mode="In" Type="DateTime" />
             <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="VerificarPlanillaVentas">
-            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_Final" Mode="In" Type="DateTime" />
             <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
@@ -1789,8 +1817,10 @@
           <EntitySetMapping Name="Planillas_Jefes">
             <EntityTypeMapping TypeName="losnacimientosModel.Planillas_Jefes">
               <MappingFragment StoreEntitySet="Planillas_Jefes">
+                <ScalarProperty Name="Categoria_Id" ColumnName="Categoria_Id" />
+                <ScalarProperty Name="Fecha_Final" ColumnName="Fecha_Final" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="Empleado_Id" ColumnName="Empleado_Id" />
                 <ScalarProperty Name="Anticipos" ColumnName="Anticipos" />
                 <ScalarProperty Name="Salario_quincenal" ColumnName="Salario_quincenal" />

@@ -29,6 +29,8 @@ namespace SistemaARD
         {
             this.WindowState = FormWindowState.Maximized;
             dashboard();
+
+       
         }
 
         //METODO PARA ABRIR FORMULADIO DENTRO DEL PANEL PRINCIPAL
@@ -170,6 +172,17 @@ namespace SistemaARD
         private void btnIndemnizaciones_Click(object sender, EventArgs e)
         {
             AbrirFormulario<ListaIndemnizaciones>();
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<RegistroUsuarios>();
         }
     }
 }

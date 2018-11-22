@@ -20,7 +20,7 @@ namespace SistemaARD
         public int Horas_laboradas { get; set; }
         public decimal Anticipos { get; set; }
         public System.DateTime Fecha_Inicio { get; set; }
-        public Nullable<System.DateTime> Fecha_Final { get; set; }
+        public System.DateTime Fecha_Final { get; set; }
         public Nullable<double> Horas_extras { get; set; }
         public Nullable<int> Dias_vacaciones { get; set; }
         public Nullable<int> Dias_incapacitado { get; set; }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaIndemnizaciones));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTotalPagoLiquido = new System.Windows.Forms.Label();
@@ -45,6 +45,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconCerrar = new System.Windows.Forms.PictureBox();
+            this.btnReporteIndemnizacionAdministracion = new System.Windows.Forms.Button();
+            this.btnReporteIndemnizacionVentas = new System.Windows.Forms.Button();
+            this.btnReporteIndemnizacionProduccion = new System.Windows.Forms.Button();
+            this.btnReporteIndemnizacionTransporte = new System.Windows.Forms.Button();
+            this.btnReporteIndemnizacionMantenimiento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             this.SuspendLayout();
@@ -59,14 +64,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Location = new System.Drawing.Point(12, 178);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -166,6 +171,7 @@
             this.cbxDepartamento.Name = "cbxDepartamento";
             this.cbxDepartamento.Size = new System.Drawing.Size(139, 24);
             this.cbxDepartamento.TabIndex = 8;
+            this.cbxDepartamento.TextChanged += new System.EventHandler(this.cbxDepartamento_TextChanged);
             // 
             // lblRetenciones
             // 
@@ -224,12 +230,97 @@
             this.iconCerrar.TabStop = false;
             this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
             // 
+            // btnReporteIndemnizacionAdministracion
+            // 
+            this.btnReporteIndemnizacionAdministracion.FlatAppearance.BorderSize = 0;
+            this.btnReporteIndemnizacionAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteIndemnizacionAdministracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnReporteIndemnizacionAdministracion.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteIndemnizacionAdministracion.Image")));
+            this.btnReporteIndemnizacionAdministracion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporteIndemnizacionAdministracion.Location = new System.Drawing.Point(497, 112);
+            this.btnReporteIndemnizacionAdministracion.Name = "btnReporteIndemnizacionAdministracion";
+            this.btnReporteIndemnizacionAdministracion.Size = new System.Drawing.Size(215, 45);
+            this.btnReporteIndemnizacionAdministracion.TabIndex = 15;
+            this.btnReporteIndemnizacionAdministracion.Text = "Generar Reporte                Anual Administración";
+            this.btnReporteIndemnizacionAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteIndemnizacionAdministracion.UseVisualStyleBackColor = true;
+            this.btnReporteIndemnizacionAdministracion.Click += new System.EventHandler(this.btnReporteIndemnizacionAdministracion_Click);
+            // 
+            // btnReporteIndemnizacionVentas
+            // 
+            this.btnReporteIndemnizacionVentas.FlatAppearance.BorderSize = 0;
+            this.btnReporteIndemnizacionVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteIndemnizacionVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnReporteIndemnizacionVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteIndemnizacionVentas.Image")));
+            this.btnReporteIndemnizacionVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporteIndemnizacionVentas.Location = new System.Drawing.Point(497, 61);
+            this.btnReporteIndemnizacionVentas.Name = "btnReporteIndemnizacionVentas";
+            this.btnReporteIndemnizacionVentas.Size = new System.Drawing.Size(215, 45);
+            this.btnReporteIndemnizacionVentas.TabIndex = 16;
+            this.btnReporteIndemnizacionVentas.Text = "Generar Reporte                Anual Ventas";
+            this.btnReporteIndemnizacionVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteIndemnizacionVentas.UseVisualStyleBackColor = true;
+            this.btnReporteIndemnizacionVentas.Click += new System.EventHandler(this.btnReporteIndemnizacionVentas_Click);
+            // 
+            // btnReporteIndemnizacionProduccion
+            // 
+            this.btnReporteIndemnizacionProduccion.FlatAppearance.BorderSize = 0;
+            this.btnReporteIndemnizacionProduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteIndemnizacionProduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnReporteIndemnizacionProduccion.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteIndemnizacionProduccion.Image")));
+            this.btnReporteIndemnizacionProduccion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporteIndemnizacionProduccion.Location = new System.Drawing.Point(497, 10);
+            this.btnReporteIndemnizacionProduccion.Name = "btnReporteIndemnizacionProduccion";
+            this.btnReporteIndemnizacionProduccion.Size = new System.Drawing.Size(215, 45);
+            this.btnReporteIndemnizacionProduccion.TabIndex = 17;
+            this.btnReporteIndemnizacionProduccion.Text = "Generar Reporte                Anual Producción";
+            this.btnReporteIndemnizacionProduccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteIndemnizacionProduccion.UseVisualStyleBackColor = true;
+            this.btnReporteIndemnizacionProduccion.Click += new System.EventHandler(this.btnReporteIndemnizacionProduccion_Click);
+            // 
+            // btnReporteIndemnizacionTransporte
+            // 
+            this.btnReporteIndemnizacionTransporte.FlatAppearance.BorderSize = 0;
+            this.btnReporteIndemnizacionTransporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteIndemnizacionTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnReporteIndemnizacionTransporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteIndemnizacionTransporte.Image")));
+            this.btnReporteIndemnizacionTransporte.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporteIndemnizacionTransporte.Location = new System.Drawing.Point(718, 10);
+            this.btnReporteIndemnizacionTransporte.Name = "btnReporteIndemnizacionTransporte";
+            this.btnReporteIndemnizacionTransporte.Size = new System.Drawing.Size(215, 45);
+            this.btnReporteIndemnizacionTransporte.TabIndex = 18;
+            this.btnReporteIndemnizacionTransporte.Text = "Generar Reporte                Anual Transporte";
+            this.btnReporteIndemnizacionTransporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteIndemnizacionTransporte.UseVisualStyleBackColor = true;
+            this.btnReporteIndemnizacionTransporte.Click += new System.EventHandler(this.btnReporteIndemnizacionTransporte_Click);
+            // 
+            // btnReporteIndemnizacionMantenimiento
+            // 
+            this.btnReporteIndemnizacionMantenimiento.FlatAppearance.BorderSize = 0;
+            this.btnReporteIndemnizacionMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteIndemnizacionMantenimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnReporteIndemnizacionMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteIndemnizacionMantenimiento.Image")));
+            this.btnReporteIndemnizacionMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporteIndemnizacionMantenimiento.Location = new System.Drawing.Point(718, 64);
+            this.btnReporteIndemnizacionMantenimiento.Name = "btnReporteIndemnizacionMantenimiento";
+            this.btnReporteIndemnizacionMantenimiento.Size = new System.Drawing.Size(215, 45);
+            this.btnReporteIndemnizacionMantenimiento.TabIndex = 19;
+            this.btnReporteIndemnizacionMantenimiento.Text = "Generar Reporte                Anual Mantenimiento";
+            this.btnReporteIndemnizacionMantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteIndemnizacionMantenimiento.UseVisualStyleBackColor = true;
+            this.btnReporteIndemnizacionMantenimiento.Click += new System.EventHandler(this.btnReporteIndemnizacionMantenimiento_Click);
+            // 
             // ListaIndemnizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1026, 504);
+            this.Controls.Add(this.btnReporteIndemnizacionMantenimiento);
+            this.Controls.Add(this.btnReporteIndemnizacionTransporte);
+            this.Controls.Add(this.btnReporteIndemnizacionProduccion);
+            this.Controls.Add(this.btnReporteIndemnizacionVentas);
+            this.Controls.Add(this.btnReporteIndemnizacionAdministracion);
             this.Controls.Add(this.iconCerrar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -273,5 +364,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox iconCerrar;
+        private System.Windows.Forms.Button btnReporteIndemnizacionAdministracion;
+        private System.Windows.Forms.Button btnReporteIndemnizacionVentas;
+        private System.Windows.Forms.Button btnReporteIndemnizacionProduccion;
+        private System.Windows.Forms.Button btnReporteIndemnizacionTransporte;
+        private System.Windows.Forms.Button btnReporteIndemnizacionMantenimiento;
     }
 }

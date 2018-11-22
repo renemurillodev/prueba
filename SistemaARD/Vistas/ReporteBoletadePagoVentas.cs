@@ -37,7 +37,7 @@ namespace SistemaARD
             {
                 this.reportViewer1.RefreshReport();
             }
-            MessageBox.Show(Convert.ToString(_idPlanillaVenta));
+            
         }
     }
 }

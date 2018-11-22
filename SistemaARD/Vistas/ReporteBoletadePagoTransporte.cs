@@ -16,5 +16,29 @@ namespace SistemaARD
         {
             InitializeComponent();
         }
+
+        private int _idPlanillaVenta;
+
+        public int idPlanillaVenta
+        {
+            get { return _idPlanillaVenta; }
+            set { _idPlanillaVenta = value; }
+        }
+
+        private void ReporteBoletadePagoTransporte_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'losnacimientosDataSet.ReporteQuincenalVentas' Puede moverla o quitarla según sea necesario.
+            try
+            {
+                this.reporte_planillaventa1TableAdapter.Fill(this.losnacimientosDataSet.reporte_planillaventa1, idPlanillaVenta);
+
+                this.reportViewer1.RefreshReport();
+            }
+            catch (Exception)
+            {
+                this.reportViewer1.RefreshReport();
+            }
+
+        }
     }
 }

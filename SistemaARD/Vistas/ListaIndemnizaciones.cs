@@ -400,7 +400,9 @@ namespace SistemaARD.Vistas
                 {
                     CargarTodas();
                 }
-            }else if(cbxDepartamento.Text == "Administración")
+                
+            }
+            else if(cbxDepartamento.Text == "Administración")
             {
                 if (fechadesde != fechaactual && fechahasta != fechaactual)
                 {
@@ -410,6 +412,7 @@ namespace SistemaARD.Vistas
                 {
                     CargarAdministracion();
                 }
+                
             }
             else if (cbxDepartamento.Text == "Mantenimiento")
             {
@@ -421,6 +424,7 @@ namespace SistemaARD.Vistas
                 {
                     CargarMantenimiento();
                 }
+                
             }
             else if (cbxDepartamento.Text == "Producción")
             {
@@ -432,6 +436,7 @@ namespace SistemaARD.Vistas
                 {
                     CargarProduccion();
                 }
+                
             }
             else if (cbxDepartamento.Text == "Ventas")
             {
@@ -443,6 +448,7 @@ namespace SistemaARD.Vistas
                 {
                     CargarVentas();
                 }
+                
             }
             else if (cbxDepartamento.Text == "Transporte")
             {
@@ -461,6 +467,96 @@ namespace SistemaARD.Vistas
         private void iconCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void cbxDepartamento_TextChanged(object sender, EventArgs e)
+        {
+            if (cbxDepartamento.Text == "Ventas")
+            {
+                btnReporteIndemnizacionVentas.Visible = true;
+                btnReporteIndemnizacionAdministracion.Visible = false;
+                btnReporteIndemnizacionMantenimiento.Visible = false;
+                btnReporteIndemnizacionTransporte.Visible = false;
+                btnReporteIndemnizacionProduccion.Visible = false;
+            }
+            else if (cbxDepartamento.Text == "Administración")
+            {
+                btnReporteIndemnizacionVentas.Visible = false;
+                btnReporteIndemnizacionAdministracion.Visible = true;
+                btnReporteIndemnizacionMantenimiento.Visible = false;
+                btnReporteIndemnizacionTransporte.Visible = false;
+                btnReporteIndemnizacionProduccion.Visible = false;
+            }
+            else if (cbxDepartamento.Text == "Mantenimiento")
+            {
+                btnReporteIndemnizacionVentas.Visible = false;
+                btnReporteIndemnizacionAdministracion.Visible = false;
+                btnReporteIndemnizacionMantenimiento.Visible = true;
+                btnReporteIndemnizacionTransporte.Visible = false;
+                btnReporteIndemnizacionProduccion.Visible = false;
+            }
+            else if (cbxDepartamento.Text == "Transporte")
+            {
+                btnReporteIndemnizacionVentas.Visible = false;
+                btnReporteIndemnizacionAdministracion.Visible = false;
+                btnReporteIndemnizacionMantenimiento.Visible = false;
+                btnReporteIndemnizacionTransporte.Visible = true;
+                btnReporteIndemnizacionProduccion.Visible = false;
+            }
+            else if (cbxDepartamento.Text == "Producción")
+            {
+                btnReporteIndemnizacionVentas.Visible = false;
+                btnReporteIndemnizacionAdministracion.Visible = false;
+                btnReporteIndemnizacionMantenimiento.Visible = false;
+                btnReporteIndemnizacionTransporte.Visible = false;
+                btnReporteIndemnizacionProduccion.Visible = true;
+            }
+            else
+            {
+                btnReporteIndemnizacionVentas.Visible = false;
+                btnReporteIndemnizacionAdministracion.Visible = false;
+                btnReporteIndemnizacionMantenimiento.Visible = false;
+                btnReporteIndemnizacionTransporte.Visible = false;
+                btnReporteIndemnizacionProduccion.Visible = false;
+            }
+        }
+        private void btnReporteIndemnizacionAdministracion_Click(object sender, EventArgs e)
+        {
+            ReporteIndemnizacionAdministracion formrepoquinceventa = new ReporteIndemnizacionAdministracion();
+            formrepoquinceventa.FechaInicio = dtpDesde.Value.Date;
+            formrepoquinceventa.FechaFinal = dtpHasta.Value.Date;
+            formrepoquinceventa.ShowDialog();
+        }
+
+        private void btnReporteIndemnizacionVentas_Click(object sender, EventArgs e)
+        {
+            ReporteIndemnizacionVentas formrepoquinceventa = new ReporteIndemnizacionVentas();
+            formrepoquinceventa.FechaInicio = dtpDesde.Value.Date;
+            formrepoquinceventa.FechaFinal = dtpHasta.Value.Date;
+            formrepoquinceventa.ShowDialog();
+        }
+
+        private void btnReporteIndemnizacionProduccion_Click(object sender, EventArgs e)
+        {
+            ReporteIndemnizacionProduccion formrepoquinceventa = new ReporteIndemnizacionProduccion();
+            formrepoquinceventa.FechaInicio = dtpDesde.Value.Date;
+            formrepoquinceventa.FechaFinal = dtpHasta.Value.Date;
+            formrepoquinceventa.ShowDialog();
+        }
+
+        private void btnReporteIndemnizacionTransporte_Click(object sender, EventArgs e)
+        {
+            ReporteIndemnizacionTransporte formrepoquinceventa = new ReporteIndemnizacionTransporte();
+            formrepoquinceventa.FechaInicio = dtpDesde.Value.Date;
+            formrepoquinceventa.FechaFinal = dtpHasta.Value.Date;
+            formrepoquinceventa.ShowDialog();
+        }
+
+        private void btnReporteIndemnizacionMantenimiento_Click(object sender, EventArgs e)
+        {
+            ReporteIndemnizacionMantenimiento formrepoquinceventa = new ReporteIndemnizacionMantenimiento();
+            formrepoquinceventa.FechaInicio = dtpDesde.Value.Date;
+            formrepoquinceventa.FechaFinal = dtpHasta.Value.Date;
+            formrepoquinceventa.ShowDialog();
         }
     }
 }

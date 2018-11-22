@@ -616,7 +616,6 @@
             this.btnAguinaldo.Text = "Generar Aguinaldo";
             this.btnAguinaldo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAguinaldo.UseVisualStyleBackColor = true;
-            this.btnAguinaldo.Visible = false;
             this.btnAguinaldo.Click += new System.EventHandler(this.btnAguinaldo_Click);
             // 
             // groupBox8
@@ -641,7 +640,7 @@
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(198, 20);
             this.dtpFechaInicio.TabIndex = 44;
-            this.dtpFechaInicio.Value = new System.DateTime(2018, 10, 24, 0, 0, 0, 0);
+            this.dtpFechaInicio.Value = new System.DateTime(2018, 11, 5, 0, 0, 0, 0);
             // 
             // lblFechaInicio
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroUsuarios));
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -39,7 +40,9 @@
             this.lblRePass = new System.Windows.Forms.Label();
             this.txtRepetirPass = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.iconCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -142,11 +145,26 @@
             this.btnEliminar.Visible = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // iconCerrar
+            // 
+            this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconCerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconCerrar.Image")));
+            this.iconCerrar.Location = new System.Drawing.Point(763, 12);
+            this.iconCerrar.Name = "iconCerrar";
+            this.iconCerrar.Size = new System.Drawing.Size(25, 25);
+            this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconCerrar.TabIndex = 9;
+            this.iconCerrar.TabStop = false;
+            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
+            // 
             // RegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.iconCerrar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dtgUsuarios);
             this.Controls.Add(this.btnRegistrar);
@@ -158,10 +176,13 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroUsuarios";
             this.Load += new System.EventHandler(this.RegistroUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +201,6 @@
         private System.Windows.Forms.Label lblRePass;
         private System.Windows.Forms.TextBox txtRepetirPass;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.PictureBox iconCerrar;
     }
 }

@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -88,12 +88,13 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\System.Net.Security.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -125,7 +126,6 @@
     <Compile Include="CategoriasPlanillas.cs">
       <DependentUpon>LosNacimientos.tt</DependentUpon>
     </Compile>
-    <Compile Include="Clases\CalculoPlanilla.cs" />
     <Compile Include="Clases\Connection.cs" />
     <Compile Include="CorreosEmpleados.cs">
       <DependentUpon>LosNacimientos.tt</DependentUpon>
@@ -251,6 +251,84 @@
     </Compile>
     <Compile Include="Planillas_Jefes.cs">
       <DependentUpon>LosNacimientos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionMantenimiento.Designer.cs">
+      <DependentUpon>ReporteIndemnizacionMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionProduccion.Designer.cs">
+      <DependentUpon>ReporteIndemnizacionProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionTransporte.Designer.cs">
+      <DependentUpon>ReporteIndemnizacionTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionVentas.Designer.cs">
+      <DependentUpon>ReporteIndemnizacionVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteIndemnizacionAdministracion.Designer.cs">
+      <DependentUpon>ReporteIndemnizacionAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoMantenimiento.Designer.cs">
+      <DependentUpon>ReporteAguinaldoMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoProduccion.Designer.cs">
+      <DependentUpon>ReporteAguinaldoProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoTransporte.Designer.cs">
+      <DependentUpon>ReporteAguinaldoTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoVentas.Designer.cs">
+      <DependentUpon>ReporteAguinaldoVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteAguinaldoAdministracion.Designer.cs">
+      <DependentUpon>ReporteAguinaldoAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteQuincenalPlanillaAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteQuincenalPlanillaAdministracion.Designer.cs">
+      <DependentUpon>ReporteQuincenalPlanillaAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteQuincenalPlanillaTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteQuincenalPlanillaTransporte.Designer.cs">
+      <DependentUpon>ReporteQuincenalPlanillaTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteQuincenalPlanillaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReporteQuincenalPlanillaProduccion.Designer.cs">
+      <DependentUpon>ReporteQuincenalPlanillaProduccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\ReporteBoletadePagoMantenimiento.cs">
       <SubType>Form</SubType>
@@ -432,11 +510,71 @@
     <Compile Include="Vistas\TiposDeTelefono.Designer.cs">
       <DependentUpon>TiposDeTelefono.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BoletadePagoProduccion.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteIndemnizacionMantenimiento.resx">
+      <DependentUpon>ReporteIndemnizacionMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ReporteIndemnizacionProduccion.resx">
+      <DependentUpon>ReporteIndemnizacionProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteIndemnizacionMantenimiento.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteIndemnizacionProduccion.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteIndemnizacionTransporte.resx">
+      <DependentUpon>ReporteIndemnizacionTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ReporteIndemnizacionVentas.resx">
+      <DependentUpon>ReporteIndemnizacionVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteIndemnizacionTransporte.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteIndemnizacionVentas.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteIndemnizacionAdministracion.resx">
+      <DependentUpon>ReporteIndemnizacionAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteIndemnizacionAdministracion.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteAguinaldoMantenimiento.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteAguinaldoMantenimiento.resx">
+      <DependentUpon>ReporteAguinaldoMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteAguinaldoProduccion.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteAguinaldoProduccion.resx">
+      <DependentUpon>ReporteAguinaldoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteAguinaldoTransporte.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteAguinaldoTransporte.resx">
+      <DependentUpon>ReporteAguinaldoTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteAguinaldoVentas.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteAguinaldoVentas.resx">
+      <DependentUpon>ReporteAguinaldoVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ReporteAguinaldoAdministracion.resx">
+      <DependentUpon>ReporteAguinaldoAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteAguinaldoAdministracion.rdlc" />
+    <EmbeddedResource Include="Reportes\BoletadePagoAdministracionrdlc.rdlc" />
+    <EmbeddedResource Include="Reportes\BoletadePagoTransporte.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteQuincenalAdministracion.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteQuincenalPlanillaTransporte.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteBoletadePagoTransporte.resx">
+      <DependentUpon>ReporteBoletadePagoTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ReporteQuincenalPlanillaAdministracion.resx">
+      <DependentUpon>ReporteQuincenalPlanillaAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ReporteQuincenalPlanillaProduccion.resx">
+      <DependentUpon>ReporteQuincenalPlanillaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\BoletadePagoProduccion.rdlc" />
     <EmbeddedResource Include="Reportes\BoletadePagoVentas.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteQuincenalPlanillaVentas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteQuincenalProduccion.rdlc" />
+    <EmbeddedResource Include="Vistas\ReporteBoletadePagoProduccion.resx">
+      <DependentUpon>ReporteBoletadePagoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ReporteBoletadePagoVentas.resx">
       <DependentUpon>ReporteBoletadePagoVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ReporteQuincenalPlanillaTransporte.resx">
+      <DependentUpon>ReporteQuincenalPlanillaTransporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ReporteQuincenalPlanillaVentas.resx">
       <DependentUpon>ReporteQuincenalPlanillaVentas.cs</DependentUpon>
@@ -538,7 +676,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SistemaARD_1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
